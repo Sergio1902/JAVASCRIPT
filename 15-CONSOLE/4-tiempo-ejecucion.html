@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // la etiqueta de inicio y final deben ser las mismas
+        console.time("cuanto tiempo demora en cargar")
+        const ARREGLO = Array(100)
+        for (let i = 0; i < ARREGLO.length; i++) {
+            ARREGLO[i] = i
+        }
+        console.timeEnd("cuanto tiempo demora en cargar")
+
+        // contabilizar cuantas veces ocurre algo
+        for (let i = 0; i < 10; i++) {
+            console.count("se ejecuto")           
+            console.log(i)
+        }
+
+        let x = 4
+        let y = 2
+        pruebaXY = "se espera que x sea menor que y"
+
+        // valida que se cumpla cierta condicion
+        console.assert(x<y,{x,y,pruebaXY})
+
+
+    </script>
+</body>
+</html>

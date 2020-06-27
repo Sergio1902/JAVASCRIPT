@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+            console.log(console)
+        /*
+            imprimir el objeto consola en forma de una tabla
+            a traves del constructor Object.entries
+            --> el .sort() ordena de forma ascendete segun el ABC
+        */
+            console.table(Object.entries(console).sort())
+
+        const NUMEROS = [1,2,3,4,5]
+        const VOCALES = ["a","e","i","o","u"]
+        // imprimir el array en forma de tabla
+            console.table(NUMEROS)
+            console.table(VOCALES)
+
+        const PERRO = {
+            nombre :"dino",
+            raza : "gran danes",
+            color : "cafe"
+        }
+       console.table(PERRO)
+
+
+    </script>
+
+</body>
+</html>
