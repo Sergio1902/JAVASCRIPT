@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        for in -->  especial para recorrer objetos "SOLO PROPIEDAD Y VALOR" 
+                    a traves de una constante que recorre todo el objeto
+        */
+        /*
+            la constante como primera vez muestra las propiedades
+            para imprimir los valores de las propiedades 
+                --> interpolar al objeto[la constante creada]
+        */
+
+    const SERGIO = {
+        nombre : "sergio",
+        celular : 966464770,
+        sexo : "masculino"
+    }
+    for (const key in SERGIO) {
+    console.log(`las propiedades son ${key} y sus valor es ${SERGIO[key]}`)
+   }
+
+
+
+    </script>
+
+</body>
+</html>

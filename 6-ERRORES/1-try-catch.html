@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // para visualizar errores cuando se presentan dados por el programador 
+            try {
+                // codigo a evaluar - al encontrar un error sale del try y se dirige al catch
+                juan  //variable no existente
+            } catch (error) {
+                // captura cualquier error lanzado del try
+                console.log("hay un error")
+                console.log(error)
+            }finally{
+                // se ejecutara siempre al final de un bloque try catch
+                console.log("siempre se va a ejecutar")
+            }
+
+
+
+    </script>
+</body>
+</html>

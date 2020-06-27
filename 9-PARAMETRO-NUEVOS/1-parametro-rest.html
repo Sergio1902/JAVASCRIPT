@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            PARAMETRO REST
+            va agregando virtualmente parametros - depende mucho 
+            de los parametros ingresados al invocar la funcion 
+        */
+        /*
+            ...c --> la forma como se asigna un parametro que va 
+            a ir aumento de acuerdo a los parametros dados en la 
+            invocacion de la funcion
+        */
+
+        // funcion declarada
+        function sumar(a,b, ...c){
+            let resultado = a + b
+            
+            // se crea un for each para recorrer los nuevos parametros
+            // asignados a c hacia delante
+            
+        c.forEach(function(elemento){
+            resultado += elemento
+        })
+        return resultado
+        }
+        
+        // funcion invocada
+        console.log(sumar(1,2,3,4))
+
+
+    </script>
+</body>
+</html>

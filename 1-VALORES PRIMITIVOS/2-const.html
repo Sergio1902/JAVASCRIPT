@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constante JavaScript</title>
+</head>
+<body>
+    
+    <script>
+        
+        // utilizando CONST 
+        /*     
+            tipos de variables primitivas
+                no puede ser vacia
+                no se puede reasignar
+        */
+        const PI = 3.1416
+        console.log(PI)
+
+        /*
+            utilizando tipos de variables compuesta
+                array o objeto --> se pueden agregar propiedades
+
+            let o const  no hay diferencia porque seguira 
+            siendo el mismo objeto pero con distintas propiedades
+        */
+
+        let objeto = {
+            nombre: "sergio",
+            edad: 25
+        }
+        let colores= ["blanco", "negro", "azul"]
+
+        // agregar un elemento a un objeto
+        objeto.correo = "ser19car@gmail.com"
+        // agregar un elemento a un array
+        colores.push("anarajado")
+
+        console.log(objeto)
+        console.log(colores)
+        
+
+
+        
+    </script>
+
+</body>
+</html>

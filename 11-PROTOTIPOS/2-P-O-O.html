@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+    /*
+        FUNCION CONSTRUCTORA 
+        se utliza el UpperCamelCase para definir el nombre (la primera
+        letra es mayuscula)
+        se crea una sola vez ya que a partir de este constructor se puede 
+        generar varias instancias
+
+        this. hace referencia al misma funcion 
+        cuando se quiere crear una funcion dentro de un constructor
+        tiene que respetar el modelo 
+        this.nombre de la funcion = function(){
+
+        lo ideal es que las funciones constructoras solo contengan a las
+        propiedades y los metodos esten dadas al prototipo  instancia 
+        creada
+        }
+    */
+        // funcion de ejemplo
+        function Animal2 (nombre, genero) {
+            // atributos
+            this.nombre = nombre
+            this.genero = genero
+            metodos
+            this.sonar = function() {
+                console.log("HOLA")
+            }
+        }
+        /*
+            se pierde memoria al utilizar la funcion sonar cada vez que
+            ejecuta 
+        */
+        // SNOPPY.sonar()
+
+        // funcion optima con los metodos fuera de la funcion
+        function Animal (nombre, genero) {
+            // atributos
+            this.nombre = nombre
+            this.genero = genero
+        }
+            // metodos fuera de la duncion
+            // llamar a la funcion creada 
+            // llamar al metodo prototype seguido del nombre de la funcion que queremos = function()
+            Animal.prototype.ladrar = function(){
+                console.log("GUA GUAU ")
+            }
+
+            const PERRO = new Animal("DINO","MACHO")
+            console.log(PERRO)
+
+
+        /*
+            para utilizar el constructor 
+            se almacena en una constante
+            palabra reservada new --> hace referencia a la creacion
+            de una instancia a partir del constructor 
+        */
+        // const SNOPPY = new Animal("snoppy", "macho")
+        // const LOLA = new Animal("Lola", "Hembra")
+
+        // console.log(SNOPPY)
+        // console.log(LOLA)
+       
+       
+
+
+    </script>
+</body>
+</html>

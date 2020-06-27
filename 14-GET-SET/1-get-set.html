@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Animal{
+            constructor(nombre, genero){
+                // atributos
+                this.nombre = nombre
+                this.genero = genero
+            }
+                // metodos 
+            sonar() {
+                console.log("HAGO SONIDOS PORQUE ESTOY VIVO")
+            }
+            saludar() {
+                console.log(`HOLA ME LLAMO ${this.nombre}`)
+            }
+        }
+        // crear herencia de CLASE Animal a INSTANCIA Perro
+        /*
+            extens = palabra reservada para indicar extension o 
+            indicar de que clase viene esta instacia
+        */
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio){
+            /*
+                con el metodo super() se llama al constructor 
+                de la clase padre
+            */
+            super(nombre, genero)
+            this.tamanio = tamanio
+            this.raza = null
+            }
+            sonar(){
+                console.log("Soy un perro y mi snido es un ladrido")
+            }
+            ladrar(){
+                console.log("GUAU GUAU !!!")
+            }
+
+            // METODOS GET Y SET
+            // para SET asignar y GET obtener valores 
+            /*
+                para indicar que es un metodo obtenedor se coloca antes del
+                nombre la palabra GET
+                recuerda java script ejecuta los metodos especiales
+                GET y SET como atributos  
+            */
+            get getRaza(){
+                return this.raza
+            }
+
+            set setRaza(raza){
+                this.raza=raza
+            }
+        }
+
+
+        const SCOOBY = new Perro("SCOBBY", "MACHO","GIGANTE")
+        console.log(Perro.getRaza)
+        console.log(SCOOBY.getRaza) 
+        console.log(SCOOBY.setRaza = "a")
+
+        /*
+        en java scrip no se puede utilizar clases protegidas ni
+        privadas
+        de lo contrario solo funcionan en ambiente de bloque
+        */
+        /*
+        metodo static se puede utilizar solamente llamando a la
+        clase principal
+        */
+        /*
+        toda clase creada en java script son publicas
+        */
+
+        
+    </script>
+
+</body>
+</html>

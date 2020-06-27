@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try {
+            let numero = "10"        
+                /*
+                isNAN -  si es numero me devuelve false -
+                         si no es numero me vuelve true
+                */
+            if(isNaN(numero)){  
+                console.log(isNaN(numero))
+                // usar el constructor de error para declarar un error personalizado
+                throw new Error("el caracter ingresado no es un numero")             
+            }
+            console.log(isNaN(numero))
+            console.log(numero*numero)
+
+        } catch (error) {
+            console.log(`se produjo el siguiente error ${error}`)
+        }finally{
+
+        }
+
+        /*
+            el error debe ir dentro de la condicion 
+            cuando NO se cumpla la condicion se realiza
+            alguna acccion 
+            si se cumple la condicion botara error
+        */
+
+
+        try {
+            let numero = 10
+            if(isNaN(numero)){          
+                throw new Error("NO ES NUMERO")
+            }
+            console.log("ES NUMERO")
+
+        } catch (error) {
+            
+            console.log(error)
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

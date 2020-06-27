@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // arreglo --> coleccion de elementos - posicion inicial 0
+
+        // utilizando el objeto ARRAY
+        
+        // array de 20 elementos con valor false
+        const D = Array(20).fill(false)
+        console.log(D)
+
+        const COLORES = ["rojo", "verde", "azul"]
+        // agregar elementos al array
+        COLORES.push("azul")
+        console.log(COLORES)
+
+        // quitar el ultimo elemento del array
+        COLORES.pop()
+        console.log(COLORES)
+
+        // recibe una funcion por cada elemento que tenga el arreglo
+        // puede tener un o mas parametros
+        // el parametro principal es el que recorre el arreglo y lo coloca dentro de cada lista a traves de la interpolacion
+       
+        COLORES.forEach(function(elemento, i){
+            console.log(`<li id=${i}>${elemento}</li>`)
+        })
+
+
+
+
+ 
+
+    </script>
+
+</body>
+</html>

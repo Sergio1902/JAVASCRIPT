@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            se utiliza como abreviatura para crear una funcion anonima
+            que sea expresada
+            el cambio es quitar la palabra FUNCTION y colocar una flecha
+            entre los parentesis y las llaves
+        */
+
+        /*
+            LAS ARROW FUNCTION CUANDO ESTAN DENTRO DE UN OBJETO CREADO 
+            POR EL PROGRAMADOR (objeto literal) PASAN A SER DE AMBITO GLOBAL 
+            A DIFERENCIA DE NO USAR ARROW FUNCTION RESPETA EL AMBITO
+            DE BLOQUE EN EL QUE FUE CREADA DICHA FUNCION DENTRO DEL OBJETO
+
+            no es recomendado crear arrow function dentro de un objeto
+            literal creado por el programador
+        */
+
+        // funcion expresada
+        const SALUDO = function () {
+            console.log("HOLA")
+        } 
+
+        const SALUDO2 = () => {
+            console.log("QUE TAL")
+        } 
+
+        /*
+            al utlizar arrow function puedes oviar las llaves siempre y
+            cuando solo tengas una linea de codigo n su interior
+        */
+        // const SALUDO2 = () => console.log("QUE TAL")
+        
+
+        SALUDO()
+        SALUDO2()
+
+
+    </script>
+</body>
+</html>

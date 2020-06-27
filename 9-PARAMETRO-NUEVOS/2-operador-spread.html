@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // expres opereitor
+        /*
+            utilizado para unir dos arreglos en uno solo
+        */
+
+        const ARRAY_UNO = [1,2,3,4,5]
+        const ARRAY_DOS = [6,7,8,9,0]
+
+        console.log(ARRAY_UNO, ARRAY_DOS)
+
+        // almacenar ambos arreglos en uno solo
+        const ARRAY_TRES = [ARRAY_UNO, ARRAY_DOS]
+        // un array compuesto por dos array mas no agrupados en uno solo
+        console.log(ARRAY_TRES)
+        /*
+            para ello se le agrega los ... antes de cada arreglo 
+            para poder unirlo en uno solo
+        */
+        const ARRAY_UNIDO = [...ARRAY_UNO,...ARRAY_DOS]
+        console.log(ARRAY_UNIDO)
+
+    </script>
+</body>
+</html>

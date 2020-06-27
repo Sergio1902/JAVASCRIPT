@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // funcion constructora
+        function Animal(nombre, genero) {
+            this.nombre = nombre
+            this.genero = genero
+        }
+        Animal.prototype.ladrar = function () {
+            console.log("GUAU GUAU")
+        }
+
+        // herencia prototipica
+        function Perro(nombre, genero, tamanio) {
+            /*
+                super hace referencia a las propiedades que se heredan 
+                del constructor Animal (nombre, genero) 
+            */
+            this.super = Animal
+            this.super(nombre, genero)
+            this.tamanio = tamanio
+
+        }
+
+        // PERRO esta heredando de ANIMAL
+        Perro.prototype = new Animal
+        Perro.prototype.constructor = Perro
+
+        console.log(Perro)
+
+    </script>
+</body>
+</html>

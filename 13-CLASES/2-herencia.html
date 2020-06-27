@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Animal{
+            constructor(nombre, genero){
+                // atributos
+                this.nombre = nombre
+                this.genero = genero
+            }
+                // metodos 
+            sonar() {
+                console.log("HAGO SONIDOS PORQUE ESTOY VIVO")
+            }
+            saludar() {
+                console.log(`HOLA ME LLAMO ${this.nombre}`)
+            }
+        }
+        // crear herencia de CLASE Animal a INSTANCIA Perro
+        /*
+            extens = palabra reservada para indicar extension o 
+            indicar de que clase viene esta instacia
+        */
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio){
+            /*
+                con el metodo super() se llama al constructor 
+                de la clase padre
+            */
+            super(nombre, genero)
+            this.tamanio = tamanio
+            }
+            sonar(){
+                console.log("Soy un perro y mi snido es un ladrido")
+            }
+            ladrar(){
+                console.log("GUAU GUAU !!!")
+            }
+        }
+
+        // const MIMI = new Animal("MIMI","HEMBRA")
+        // const SCOOBY = new Perro("SCOBBY", "MACHO","GIGANTE")
+
+        // console.log(MIMI)
+        // MIMI.sonar()
+        // MIMI.saludar()
+        // console.log(SCOOBY)
+        // SCOOBY.saludar()
+        // SCOOBY.sonar()
+        // SCOOBY.saludar()
+
+
+
+
+    </script>
+
+</body>
+</html>

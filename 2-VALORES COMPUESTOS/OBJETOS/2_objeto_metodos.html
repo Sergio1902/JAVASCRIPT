@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // OBJETO --> coleccion de valores
+        /*
+        toda propiedad y valor dentro de un OBJETO 
+            se conoce como atributo o propiedad
+        toda funcion dentro de un OBJETO 
+            se conoce como metodo
+        */
+
+        const SERGIO = {
+            // propiedad : valor 
+            nombre : "sergio",
+            edad : 25,
+            pasatiempo : ["musica", "diseño"],
+            contacto : {
+                // propiedad : valor
+                email : "ser19car@gmail.com",
+                cel : 966464770
+            },
+            // se declara la funcion asi porque esta dentro de un OBJETO propiedad : valor
+            saludar : function(){
+                console.log("Hola")
+            }  
+        }
+
+        // lista el nombre de la propiedad de cada elemento utilizando el objeto Object
+        console.log(Object.keys(SERGIO))
+        // lista el valor de cada elemento utilizando el objeto Object
+        console.log(Object.values(SERGIO))
+        // si existe ese atributo dentro del OBJETO
+        console.log(SERGIO.hasOwnProperty("nombre"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

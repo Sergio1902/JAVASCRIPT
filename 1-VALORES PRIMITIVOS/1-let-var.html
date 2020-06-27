@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables JavaScript</h1>
+</body>
+<script>
+
+    // var es de ambito global - se graba en el objeto windows
+    var hola="hola mundo"
+    // let es de ambito de bloque - todo lo separado entre llaves
+    // no se graba en el objeto global
+    let hello="HOLA"
+
+    console.log(hola)
+    console.log(hello)
+
+    // todo lo que este en la ventana de java script
+    console.log(window)
+
+    console.log("******* USANDO VAR *******")
+
+    var musica = "rock"
+    console.log(musica)
+    {
+        var musica = "pop"
+        console.log(musica)
+    }
+    console.log(musica)
+
+    console.log("******* USANDO LET *******")
+
+    let musica2 = "rock"
+    console.log(musica2)
+    {
+        let musica2 = "pop"
+        console.log(musica2)
+    }
+    console.log(musica2)
+
+
+</script>
+</html>

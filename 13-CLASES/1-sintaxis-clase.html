@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            las clases no reciben parametros
+            que hacer? tiene un metodo especial CONSTRUCTOR para recibir 
+            dichas propiedades
+        */
+        class Animal{
+            /*
+                constructor es un metodo especial que se ejecuta
+                en el momento de instanciar la clase|
+            */
+            constructor(nombre, genero){
+                // atributos
+                this.nombre = nombre
+                this.genero = genero
+            }
+            /*
+                para los metodos o funciones dentro de un objeto se
+                obia la palabra reservada function y solo se coloca
+                el nombre de la funcion (){}
+            */
+            /*
+                los metodos si se pueden crear dentro de la clase
+            */
+            // metodos 
+            sonar() {
+                console.log("HAGO SONIDOS PORQUE ESTOY VIVO")
+            }
+            saludar() {
+                console.log(`HOLA ME LLAMO ${this.nombre}`)
+            }
+        }
+
+        const MIMI = new Animal("MIMI","HEMBRA")
+        const SCOOBY = new Animal("SCOBBY", "MACHO")
+
+        console.log(MIMI)
+        MIMI.saludar()
+        MIMI.sonar()
+        console.log(SCOOBY)
+
+
+    </script>
+
+</body>
+</html>

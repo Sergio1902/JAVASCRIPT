@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // funcion declarada vs funcione expresada
+
+        // funcion declarada
+        // puede invocarse antes o despues de ser creada la funcion java script por defecto los ubica en elambito global en la parte superior 
+
+        funcionDeclarada()
+
+        function funcionDeclarada(){
+            console.log("funcion declarada")
+        }    
+        funcionDeclarada()
+
+        
+        // funcion expresada
+        // cuando una funcion es almacenada en una variable no se ubica en el ambito global por lo tanto se tiene que invocar a la funcion despues de ser expresada
+        
+        const funcionExpresada = function(){
+            console.log("funcion expresada")
+        }
+        funcionExpresada()
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

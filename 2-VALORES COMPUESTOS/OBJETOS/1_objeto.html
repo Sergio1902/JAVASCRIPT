@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        objeto -->  coleccion de informacion 
+                    tiene dos atributos importantes
+        */
+        // propiedades --> caracteristicas
+        // metodos     --> acciones para realizar algo con la variable
+        /*
+        toda propiedad y valor dentro de un OBJETO 
+            se conoce como atributo o propiedad
+        toda funcion dentro de un OBJETO 
+            se conoce como metodo
+        */
+
+        const A = {}
+        console.log(A)
+
+        const  SERGIO= {
+            // propiedad : valor 
+            nombre : "sergio",
+            edad : 25,
+            pasatiempo : ["musica", "diseño"],
+            contacto : {
+                // propiedad : valor
+                email : "ser19car@gmail.com",
+                cel : 966464770
+            },
+            // se declara la funcion asi porque esta dentro de un OBJETO propiedad : valor
+            saludar : function(){
+                console.log("Hola")
+            }  
+        }
+
+        // a traves del punto se puede acceder al elemento asignado
+        // al igual que llamar a una propiedad o atributo del objeto
+        console.log(SERGIO.nombre)
+        // un ARREGLO dentro de un OBJETO
+        console.log(SERGIO.pasatiempo[0])
+        // un OBJETO dentro deotro OBJETO
+        console.log(SERGIO.contacto.email)
+        // una FUNCION dentro de un ARREGLO considerado como METODO
+        SERGIO.saludar()
+       
+
+    </script>
+    
+</body>
+</html>
