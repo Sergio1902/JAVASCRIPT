@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Date())
+
+        /*
+            de preferencia al utilizar el metodo Date 
+            almacenarlo en una variable 
+        */
+        
+        let fecha = new Date()
+        console.log(fecha)
+
+        console.log(fecha.getDate())   // numero del dia
+        console.log(fecha.getDay())    // nuero del dia de la semana
+        console.log(fecha.getMonth())  // numero del mes - posicion inicio 0
+        console.log(fecha.getFullYear()) // año 
+        console.log(fecha.getHours())    //hora 
+        console.log(fecha.getMinutes())  //minutos
+        console.log(fecha.getSeconds())  //segundos
+
+        // mostrar fecha humanamente entendible
+        console.log(fecha.toString())
+        console.log(fecha.toDateString())   //  dia mes y año
+        console.log(fecha.toLocaleString()) //  fecha y hora 
+        console.log(fecha.toLocaleDateString()) //  fecha
+        console.log(fecha.toLocaleTimeString()) //  hora
+
+        // mostrar hora del meridiano hora real
+        // utilizamos el toUTF para todos los metodos Date
+        console.log(fecha.toUTCString())
+        
+        console.log(Date.now())  // numero de segundos que ha pasado
+
+        // ingresar mi fecha de nacimiento 
+        // usando el construcctor Date
+        let fechaNacimiento = new Date(1995,1,19)
+        console.log(fechaNacimiento)
+
+    </script>
+</body>
+</html>
