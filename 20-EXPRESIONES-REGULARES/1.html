@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            EXPRESIONES REGULARES
+            secuencia de caracteres para realizar busquedas
+            en cadenas de texto 
+        */
+
+        let cadena = "lorem Magna amet esta lorem."
+
+        
+        /*
+            --> ( "palabra a buscar" , "banderas")
+            -->  /palabra a buscar/banderas
+            
+            * banderas *
+                i --> no diferencia entre mayusculas y 
+                    mininsculas
+                g --> permite buscar en toda la cadena 
+                    de texto
+                    
+        */
+        
+        // PRIMERA FORMA
+        // utilizando el constructor RegExp
+        let expReg = new RegExp("lorem","ig")
+        // testear en la variable cadena (tru o false)
+        console.log(expReg.test(cadena))
+        // mostrar informacion de la busqueda
+        console.log(expReg.exec(cadena))
+
+        // SEGUNDA FORMA
+        // utilizando el constructor RegExp
+        let expReg2 = /lorem/ig
+        // testear en la variable cadena
+        console.log(expReg2.test(cadena))
+        // mostrar informacion de la busqueda
+        console.log(expReg2.exec(cadena))
+
+
+
+
+    </script>
+</body>
+</html>
