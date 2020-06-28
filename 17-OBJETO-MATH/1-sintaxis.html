@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            OBJETO MATH 
+                objeto de tipo estatico por lo tanto 
+                cada vez que se requiera se necesita invocar
+                directamente al prototipo MAth  
+        */
+        console.log(Math)
+         /*
+            la mayoria de los metodos del objeto MATH son 
+            constantes
+        */
+        console.log(Math.PI)
+
+        console.log(Math.abs(-7))   // valor absoluto
+        console.log(Math.ceil(8.8)) // redondeo ascendente
+        console.log(Math.floor(8.7)) // redondeo descendente
+        console.log(Math.round(7.8)) // redonde mas cercano
+        console.log(Math.sqrt(81))  // raiz cuadrada
+        console.log(Math.pow(2,5))  // potencia
+        /*
+            devuelve si el numero es positivo +1
+                                     negatico -1
+                                     0 si es 0            
+        */
+        console.log(Math.sign(8)) 
+        console.log(Math.random())
+
+        // numero al azar entre 0 y 100
+        console.log(parseInt(Math.random()*100))
+        console.log(Math.round(Math.random()*100))
+
+    </script>
+</body>
+</html>

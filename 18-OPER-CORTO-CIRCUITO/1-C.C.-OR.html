@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            OPERADOR CORTO CIRCUITO
+            funciona utilizando dos condiciones 
+            utilizando operadores logicos && ||
+        */
+        /*
+            OPERADOR C.C. CON ||
+            cuando el valor inicial carga a true
+            es el valor que tomara por defecto de lo
+            contrario tomara el segundo valor
+        */
+
+        function saludar(nombre) {
+            // operador corto circuito
+            nombre = nombre || "desconocido"
+            console.log(`hola ${nombre}`)
+        }
+        saludar("sergio")
+        saludar()
+
+        // ejemplos
+        console.log("sergio" || "segundo valor")
+        console.log( 1 || "segundo valor")
+        console.log("" || "segundo valor")
+        console.log(true || "segundo valor")
+        console.log(false || "segundo valor")
+        console.log(" " || "segundo valor")
+        console.log(0 || "segundo valor")
+
+
+
+    </script>
+</body>
+</html>
