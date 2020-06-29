@@ -7,51 +7,42 @@
 </head>
 <body>
     <script>
-        try {
-            let numero = "10"        
-                /*
-                isNAN -  si es numero me devuelve false -
-                         si no es numero me vuelve true
-                */
-            if(isNaN(numero)){  
-                console.log(isNaN(numero))
-                // usar el constructor de error para declarar un error personalizado
-                throw new Error("el caracter ingresado no es un numero")             
-            }
-            console.log(isNaN(numero))
-            console.log(numero*numero)
-
-        } catch (error) {
-            console.log(`se produjo el siguiente error ${error}`)
-        }finally{
-
-        }
-
+           
         /*
-            el error debe ir dentro de la condicion 
-            cuando NO se cumpla la condicion se realiza
-            alguna acccion 
-            si se cumple la condicion botara error
+            isNAN -  si es numero me devuelve false -
+                     si no es numero me vuelve true
         */
-
-
+   
+        /*
+            el error debe ir dentro de la evaluacion de codigo ("try")
+            RECUERDA:
+            si se cumple la condicion mostrara el error
+            si no cumple lacondicion ejecutara alguna accion  
+        */
+            
+        
         try {
-            let numero = 10
-            if(isNaN(numero)){          
-                throw new Error("NO ES NUMERO")
+            let a = prompt("ingrese el numero")
+            if(a<8){    
+                throw new Error("no cumple la condicion")
             }
-            console.log("ES NUMERO")
+            console.log(a*a)
 
         } catch (error) {
-            
+                
             console.log(error)
-
         }
+        
+       try {
+            let a = prompt("ingrese el numero")
+            if(isNaN(a)){
+                throw new Error("no es numero")
+            }
+            console.log(Math.pow(a,2))
 
-
-
-
-
+       } catch (error) {    
+           console.log(error)
+       }
 
 
 

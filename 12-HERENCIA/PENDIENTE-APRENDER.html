@@ -26,12 +26,11 @@
             this.super = Animal
             this.super(nombre, genero)
             this.tamanio = tamanio
-
         }
 
         // PERRO esta heredando de ANIMAL
         Perro.prototype = new Animal
-        Perro.prototype.constructor = Perro
+        
 
         console.log(Perro)
 

@@ -10,8 +10,7 @@
  
     /*
         FUNCION CONSTRUCTORA 
-        se utliza el UpperCamelCase para definir el nombre (la primera
-        letra es mayuscula)
+        se utliza el UpperCamelCase
         se crea una sola vez ya que a partir de este constructor se puede 
         generar varias instancias
 
@@ -30,24 +29,23 @@
             // atributos
             this.nombre = nombre
             this.genero = genero
-            metodos
+            // metodos
             this.sonar = function() {
                 console.log("HOLA")
             }
         }
-        /*
+        /*  NO OPTIMO
             se pierde memoria al utilizar la funcion sonar cada vez que
             ejecuta 
         */
-        // SNOPPY.sonar()
 
-        // funcion optima con los metodos fuera de la funcion
+        // OPTIMO con los metodos fuera de la funcion
         function Animal (nombre, genero) {
             // atributos
             this.nombre = nombre
             this.genero = genero
         }
-            // metodos fuera de la duncion
+            // metodos fuera de la funcion
             // llamar a la funcion creada 
             // llamar al metodo prototype seguido del nombre de la funcion que queremos = function()
             Animal.prototype.ladrar = function(){
@@ -57,12 +55,11 @@
             const PERRO = new Animal("DINO","MACHO")
             console.log(PERRO)
 
-
         /*
             para utilizar el constructor 
             se almacena en una constante
-            palabra reservada new --> hace referencia a la creacion
-            de una instancia a partir del constructor 
+            palabra reservada new -->   hace referencia a la creacion
+                                        de una instancia a partir del constructor 
         */
         // const SNOPPY = new Animal("snoppy", "macho")
         // const LOLA = new Animal("Lola", "Hembra")
@@ -70,9 +67,7 @@
         // console.log(SNOPPY)
         // console.log(LOLA)
        
-       
-
-
+    
     </script>
 </body>
 </html>

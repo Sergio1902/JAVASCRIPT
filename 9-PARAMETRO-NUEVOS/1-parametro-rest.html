@@ -18,8 +18,8 @@
             invocacion de la funcion
         */
 
-        // funcion declarada
-        function sumar(a,b, ...c){
+         // funcion declarada
+         function sumar(a,b, ...c){
             let resultado = a + b
             
             // se crea un for each para recorrer los nuevos parametros
@@ -34,6 +34,16 @@
         // funcion invocada
         console.log(sumar(1,2,3,4))
 
+
+        // segundo ejemplo 
+       function saludar(...par1){
+        par1.forEach( function (e) {
+            console.log(`hola ${e}`)
+            
+        })        
+       }
+        saludar("sergio","jorge","saul")
+       
 
     </script>
 </body>
