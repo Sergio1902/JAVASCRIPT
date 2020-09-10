@@ -10,38 +10,7 @@
 
 
 <script>
-
-        class Persona {
-            constructor(nombre,apellido,sexo){
-                this.nombre = nombre
-                this.apellido = apellido
-                this.sexo = sexo
-            }
-
-            saludar(nombre,apellido){
-                console.log(`hola ${nombre} ${apellido} como estas? `)
-            }
-        }
-
-        class Adolescente extends Persona{
-            constructor(nombre,apellido,sexo,edad){
-                super(nombre,apellido,sexo)
-                this.edad = edad
-            }
-            despedirse(nombre,apellido){
-                console.log(`hola ${nombre} ${apellido} eres menor de edad? `)
-            }
-
-        }
-
-        const SERGIO = new Adolescente("sergio","carbajal","M",25)
-        console.log(SERGIO)
-        SERGIO.despedirse("sergio","carbajal")
-        const MAYOR = new Persona("sergio","carbajal","M")
-        console.log(MAYOR)
-        MAYOR.saludar("sergio","carbajal")
-
-
+        console.log(parseInt(Math.random()*50))
 
 </script>
 
