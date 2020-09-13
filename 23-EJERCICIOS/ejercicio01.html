@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+-->
+
+
+
+<script type="module">
+    
+    // EJERCICIO 01
+    function Texto(cadena ="") {   
+        if(!cadena){
+            console.warn("debe ingresar una cadena de texto")
+        } else if(isNaN(cadena)){
+            console.log(`la cadena ${cadena} tiene ${cadena.length} caracteres`) 
+        }
+         else{
+            console.log("no ingrese numeros")
+         }
+     }
+    // Texto("hola")
+
+    
+    
+    // EJERCICIO 02
+
+     const TextoRecortado = (texto="", corte = undefined) => {
+        (!texto)
+        ? console.log("usted no ingreso texto")
+        : console.log(texto.substr(0, corte))
+     }
+      TextoRecortado("asdsa",2)
+
+
+    function Texto2(cadena2, recorte) {
+        if(!texto) return console.warn("usted debe ingresar un texto")
+        if(!corte) return console.warn("usted debe ingresar el numero de caracteres para el corte")
+    if(isNaN(cadena2)){
+        console.log(cadena2.substr(0,recorte))
+    }else{
+        console.log("ingrese un texto")
+        }
+    }
+    // Texto2("hola como es",3)
+
+    // EJERCICIO 03
+    function Texto3(cadena3,separador) {
+    if(isNaN(cadena3.trim())){
+        console.log(cadena3.split(separador))
+    }else{
+        console.log("ingrese un texto")
+        }
+    }
+    // Texto3("holaaaaaa que tal"," ")
+
+    // EJERCICIO 04
+    function Texto4(cadena4, repeticion) {
+    if(isNaN(cadena4.trim())){
+        console.log(cadena4.repeat(repeticion))
+    }else{
+        console.log("ingrese un texto")
+        }
+    }
+    // Texto4("holaaaaaa que tal",5)
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
