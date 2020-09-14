@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+// 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+// 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+// 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+    // ejercicio 05
+
+        // function InviertePalabras(palabra="") {
+        //     if(!palabra) return console.warn("usted debe ingresar una palabra")
+        //     if(isNaN(palabra)){
+        //         console.log(palabra.split("").reverse().join(""))
+        //     } else{
+        //         console.warn("usted esta ingresando numeros")
+        //     }
+        // }
+        // InviertePalabras("mañana")
+
+    // ejercicio 06
+
+            // function contarPalabra(frase ="", palabraBuscar="") {
+            //     if(!frase) return console.warn("usted debe ingresar una frase")
+            //     if(!palabraBuscar) return console.warn("usted debe ingresar la palabra de busqueda")
+                
+            //     let busqueda = new RegExp(`${palabraBuscar}`,"ig")
+            //     let contar = (frase.match(busqueda) || []).length
+            //     console.log(contar)           
+                
+            //     }
+
+            //     contarPalabra("que tal como estas si bien todo bien ", "bien")
+      
+      // ejercicio 07
+
+            //     function palindromo(palabra="") {
+            //         if(!palabra) return console.warn("usted tiene que ingresar una palabra")
+            //         if(isNaN(palabra)){
+            //             let palabraIvertida = palabra.split("").reverse().join("")
+            //             if(palabra === palabraIvertida){
+            //                 console.log(`la palabra ${palabra} es un palindromo`)
+            //             } else{
+            //                 console.log(`la palabra ${palabra} no es un palindromo`)
+            //         } 
+            //     } else{
+            //         console.warn("usted no puede ingresar numeros")
+            //     }          
+            // }
+            //     palindromo("jorge")
+
+    // ejercicio 08
+
+                function EliminaPatron(frase="", patron="") {
+                   let recorte = new RegExp(patron,"ig")
+                    console.log(frase.replace(recorte,""))
+                       
+                   
+                }
+                EliminaPatron("hola, hcomo","h")
+
+
+    </script>
+</body>
+</html>

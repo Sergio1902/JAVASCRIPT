@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+// 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+// 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+
+
+        // ejercicio 9
+
+            // function NumeroAleatorio(max, min) {
+                
+            //     console.log(parseInt(Math.random() * (max-min)+min))
+            // }
+            // NumeroAleatorio(500,600)
+
+        // ejercicio 10
+
+                // function capicua(numero=0) {
+                //     if(!numero) return console.warn("usted debe ingresar un numero")
+                //     if(typeof numero !== Number) return console.warn("usted no debe ingresar texto")
+                //     if(Math.sign(numero) === -1 ) return console.log("usted no debe ingresar numero negativos")
+
+                //     let nuevoNumero = numero.toString().split("").reverse().join("")
+                //     if(numero === nuevoNumero)
+                //     {
+                //         console.log(`el numero ${numero} es capicua`)
+                //     }else{
+                //         console.log(`el numero ${numero} no es capicua`)
+                //     }
+
+                // }
+                // capicua(20)
+
+
+
+
+        // ejercicio 11
+
+         function Factorial(numero=undefined) {
+            if(!numero) return console.warn("usted debe ingresar un numero")
+            if(typeof numero !== "number") return console.warn("usted debe ingresar un numero")
+            if(Math.sign(numero) === -1 ) return console.log("usted no debe ingresar numero negativos")
+            
+            factor = 1
+            
+            for (let i = 1; i <= numero; i++) {
+                factor = factor * i       
+            }
+            
+            console.log(`el factorial del numero ${numero} es ${factor} `)
+        }
+        Factorial(5)
+
+        
+    </script>
+</body>
+</html>
