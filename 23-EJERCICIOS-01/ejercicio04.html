@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F. -->
+
+<script>
+
+    // ejercicio 12
+
+    // function numeroPrimo(numero=undefined) {
+    //     if(!numero) return console.warn("usted no a ingresado ningun numero")
+    //     if(typeof numero !== "number") return console.warn("usted no puede ingresar texto")
+    //     if(numero%2 === 0 || numero%3 === 0 || numero%5 === 0){
+    //         console.log(`el numero ${numero} no es primo `)
+    //     } else{
+    //         console.log(`el numero ${numero} es primo `)
+    //     }
+    // }
+    // numeroPrimo("hola")
+
+
+
+
+    // ejercicio 13
+
+    // function numeroPar(numero=undefined) {
+    //     if(!numero) return console.log("usted debe ingresar un numero")
+    //     if(typeof numero !== "number") return console.warn("usted no puede ingresar texto")
+
+    //     if(numero%2 === 0){
+    //         console.log(`el numero ${numero} es par`)
+    //     } else{
+    //         console.log(`el numero ${numero} es impar`)
+    //     }
+        
+    // }
+
+    // numeroPar(13)
+        
+
+
+
+
+    // ejercicio 15
+
+    function convertirTemperatura(temperatura=undefined, tipo="") {
+        
+        
+
+        if(!temperatura) return console.warn("usted no a ingresado temperatura")
+        if(typeof temperatura !== "number") console.warn("la teperatura no debe ser texto")
+        if(typeof tipo === "number") return console.warn("el tipo de temperatura no debe ser numero")
+        if(!tipo) return console.warn("usted no a ingresado el tipo de temperatura")
+        
+        let tipoConversion = tipo.toUpperCase()       
+
+        if(tipoConversion === "C" || tipoConversion === "F"){
+                if(tipoConversion === "C"){ 
+                    let tempConversion = temperatura * 9/5 + 32
+                    console.info(`${temperatura} grados ${tipoConversion} equivalen a ${tempConversion} grados F`)
+                } else if(tipoConversion === "F"){
+                    let tempConversion = (temperatura - 32) * 9/5 
+                    console.info(`${temperatura} grados ${tipoConversion} equivalen a ${tempConversion} grados C`)
+                }
+        } 
+        else{
+            console.warn("el tipo de temperatura no es correcto")
+        }     
+           
+}
+    convertirTemperatura(20,"f")
+
+
+</script>
+
+
+
+</body>
+</html>
