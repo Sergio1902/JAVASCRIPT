@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+
+        // EJERCICIO 15
+            // function ConvertirNumero(numero = undefined, base = undefined) {
+                
+            //     if(numero === undefined) return console.warn("usted debe ingresar un numero")
+            //     if(typeof numero !== "number") return console.warn("el valor ingresado no es un numero")
+
+            //     if(base === undefined) return console.warn("usted debe ingresar la base indicada")
+            //     if(typeof base !== "number") return console.warn("el valor ingresado no es un numero")
+
+            //     if(base === 2){
+            //         console.log(`${numero} en base ${base} es equivalente a ${parseInt(numero,2)} en base 10 `)
+            //     } else if(base === 10){
+            //         console.log(`${numero} en base ${base} es equivalente a ${numero.toString(2)} en base 2 `)
+            //     }
+
+            // }
+            // ConvertirNumero(100,10)
+
+
+       // EJERCICIO 16
+
+            // function Descuento(monto=undefined, descuento=undefined) {
+
+            //     if(monto === undefined) return console.warn("usted debe ingresar un monto")
+            //     if(descuento === undefined) return console.warn("usted debe ingresar un descuento")
+            //     if(monto === 0) return console.warn("el monto ingresado no puede ser 0")
+            //     if(Math.sign(monto) === -1) return console.warn("el monto ingresado no puede ser negativo")
+            //     if(typeof monto !== "number" || typeof descuento !== "number") return console.warn("usted no puede ingresar textos")
+
+            //     let montoFinal = monto - monto*(descuento/100)
+            //     console.log(montoFinal)
+                
+            // }
+            // Descuento(1000,20)
+
+
+
+       // EJERCICIO 17
+
+                function AñosTranscurridos(fecha = undefined) {
+                    if(fecha === undefined) return console.warn("usted no a ingresado una fecha")
+                    if(!fecha instanceof Date) return console.warn("el formnato de fecha no es válido")
+                    
+                    let fechaActual = new Date().getTime()
+                    let diferenciaFechas = fechaActual - fecha.getTime()
+                    
+                    // convertir al formato que yo quiero
+                    let conversion = 1*365*24*60*60*1000
+
+                    let resultado = Math.floor(diferenciaFechas / conversion)
+                    
+
+                    if(Math.sign(resultado) === -1){
+                        console.log(`falta transcurrir ${Math.abs(resultado)} años`)
+                    } else if(Math.sign(resultado) === 1){
+                        console.log(`ha transcurrido ${Math.floor(resultado)} años`)
+                    } else if(Math.sign(resultado) === 0){
+                        console.log("la fecha ingresa es la actual")
+                    }
+
+                }
+                AñosTranscurridos(new Date(2555,8,16))
+
+
+
+
+
+    </script>
+</body>
+</html>
