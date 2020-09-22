@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero. -->
+
+<script>
+    
+    
+    // ejercicio 18
+
+        function contarLetras(cadena = "") {
+
+            // if(!cadena) return console.warn("usted debe ingresar una cadena de texto")
+            // if(typeof cadena !== "string") return console.warn("usted solo puede ingresar cadenas de texto") 
+
+            // let vocales = 0
+            // let consonantes = 0
+
+            // for (const i of cadena) {
+            //     let expRegVoc = new RegExp(/[aeiou]/ig) 
+            //     let expRegCons = new RegExp(/[bcdfghjklmnñpqrstvwxyz]/ig)   
+
+            //     if(expRegVoc.test(i)){
+            //         vocales++
+            //     }
+
+            //     if(expRegCons.test(i)){
+            //         consonantes++
+            //     }
+
+            // }
+
+            // console.log(`la frase ${cadena} tiene ${vocales} vocales y ${consonantes} consonantes `)
+
+
+
+
+
+                /*
+                recuerda la expresion regular seguida de las banderas.test 
+                te puede ayudar a comparar cada letra de la cadena de Texto con 
+                la expresion regular a comparar. y te devolvera un tru o false
+                */
+
+                let vocales = /[aeiou]/ig.test(cadena)
+
+                if(vocales){
+                    console.log("esta palabra tiene voacales")
+                }else{console.log("esto no tiene vocales")}
+
+            
+            
+        }
+
+        // contarLetras("hgfja")
+
+
+
+
+
+
+// ejercicio 19
+
+        // EXPRESION REGULAR PARA NOMRES Y APELLIDOS
+            // /^[A-Za-zÑñÁÉÍÓÚáéíóú\s]+$/ig
+           
+
+        function validarNombre(nombre = "") {
+            if(!nombre) return console.warn("no a ingresado cadena de texto")
+            if(typeof nombre !== "string") return console.warn("usted solo puede ingresar cadenas de texto") 
+
+            let expRegNom = new RegExp(/^[A-Za-zÑñÁÉÍÓÚáéíóú\s]+$/ig) 
+            let validar = expRegNom.test(nombre)
+
+            if(validar){
+                console.log("este nombre es valido")
+            }else{
+                console.log("este nombre no es valido")
+            }
+        }
+        // validarNombre("Juan Carlos")
+
+
+// ejercicio 20
+
+        // EXPRESION REGULAR PARA EMAIL
+            // /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
+
+
+        function validarEmail(correo = "") {
+            if(!correo) return console.warn("usted no ha ingresado un correo")
+            if(typeof correo !== "string") return console.warn("usted solo puede ingresar cadenas de texto")
+
+            let expRegEmail = new RegExp(/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i)
+            let validacion = expRegEmail.test(correo)
+
+            if(validacion){
+                console.log("correo valido")
+            }else{
+                console.log("correo no valido")
+            }
+        }
+        validarEmail()
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

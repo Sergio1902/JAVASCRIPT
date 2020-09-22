@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+            // function NumeroCuadrado(array = undefined) {
+            //     if(array === undefined) return console.warn("usted no ha ingresado datos")
+            //     if (!(array instanceof Array)) return console.warn("solo permite tipo arreglo")
+
+            //     for (const i of array) {
+            //         if(typeof i !== "number"){
+            //             alert(typeof array[i])
+            //             console.warn("solo se permiten numeros dentro del arreglo")
+            //         }                    
+            //     }
+            //     if(array.length === 0) return console.warn("usted debe ingresar datos")
+                
+                /*
+                MAP - RECIBE UN ARREGLO Y DEVUELVE UN ARREGLO
+                    DE REALIZARSE AGUNA MODIFICACION SE HACE A TRAVES DE UNA FUNCION INDICANDO 
+                    UN PARAMETRO DENTRO DE LA FUNCION QUE VA A RECORRER CADA POSICION DEL ARRAY 
+                    PARA MODIFICARLO Y LUEGO ALMACENAR CADA CAMBIO DENTRO DEL NUEVO ARRAY
+                
+                */
+
+            //     const ARREGLONUEVO = array.map(function (a) {
+            //         a = Math.pow(a,2)
+            //         return a
+            //     })
+
+            //     console.log(`${ARREGLONUEVO}`)
+
+            // }
+
+            // NumeroCuadrado([1,2])
+        
+
+// 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+            
+
+// function NumeroCuadrado(array2 = undefined) {
+                // if(array2 === undefined) return console.warn("usted no ha ingresado datos")
+                // if (!(array2 instanceof Array)) return console.warn("solo permite tipo arreglo")
+
+                // for (const i of array2) {
+                //     if(typeof i !== "number"){
+                //         alert(typeof array2[i])
+                //         console.warn("solo se permiten numeros dentro del arreglo")
+                //     }                    
+                // }
+                /*
+                metodo MAX y MIN permite encontrar numero mayor y menor de un arreglo
+                son metodos del Objeto Math donde utilizan un array con el expres operation
+                */
+                // console.log(`el numero mayor es ${Math.max(...array2)} y el menor es ${Math.min(...array2)} `)
+
+            // }
+
+            // NumeroCuadrado([1,2,3,10])
+
+
+
+
+
+
+// 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+    function ParesImpares(array = undefined) {
+            if(array === undefined) return console.warn("usted no ha ingresado datos")
+            if (!(array instanceof Array)) return console.warn("solo permite tipo arreglo")
+
+            for (const i of array) {
+                if(typeof i !== "number"){
+                    alert(typeof array[i])
+                    console.warn("solo se permiten numeros dentro del arreglo")
+                }                    
+            }
+            if(array.length === 0) return console.warn("usted debe ingresar datos")
+                
+                /*
+                FILTER - RECIBE UN ARREGLO Y DEVUEKVE UN ARREGLO FILTRADO SEGUN UNA CONDICION 
+                    ESTA CONDICION SE HACE A TRAVES DE UNA FUNCION INDICANDO 
+                    UN PARAMETRO DENTRO DE LA FUNCION QUE VA A RECORRER CADA POSICION DEL ARRAY 
+                    PARA MODIFICARLO Y LUEGO ALMACENAR CADA CAMBIO DENTRO DEL NUEVO ARRAY
+                
+                */
+
+            const NUMEROSPARES = array.filter(function (a) {     
+                if(a%2 === 0){
+                   return a      
+                }
+            })
+            const NUMEROSIMPARES = array.filter(function (a) {     
+                if(a%2 !== 0){
+                   return a      
+                }
+            })
+                console.log(`NUMEROS PARES: ${NUMEROSPARES} NUMEROS IMPARES: ${NUMEROSIMPARES} `)
+                 
+
+             }
+
+             ParesImpares([15,2,4])
+    </script>
+</body>
+</html>
