@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+// 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+    
+    // function OrdenarNumeros(array=undefined) {
+    //     if(array === undefined) return console.warn("usted no ingreso datos correspondientes")
+    //     if(!(typeof array instanceof Array)) return console.warn("usted solo puede ingresar datos de tipo Arreglo")
+    //     if(array.length === 0) return console.warn("usted a ingresado un array vacio")
+    //     for (const i of array) {
+    //         if( typeof i !== "number"){
+    //             console.warn("usted solo puede ingresar numeros como datos del arreglo")
+    //         }
+    //     }
+
+    //     const ASCENDENTE = array.map(function (e) {
+    //         return e
+    //     }).sort(function (a,b) {
+    //         return a-b
+    //     })
+
+    //     const DESCENDENTE = array.map(function (e) {
+    //         return e
+    //     }).sort(function (a,b) {
+    //         return b-a
+    //     })
+
+    //     console.log({
+    //         DESCENDENTE,
+    //         ASCENDENTE
+    //     })
+        
+    // }
+    // OrdenarNumeros([1,20,9,4])
+    
+//    25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+
+        function ValoresRepetidos(array) {
+            if(array === undefined) return console.warn("usted no ingreso datos correspondientes")
+            if(!(typeof array instanceof Array)) return console.warn("usted solo puede ingresar datos de tipo Arreglo")
+            if(array.length === 0) return console.warn("usted a ingresado un array vacio")
+            for (const i of array) {
+                if( typeof i !== "number"){
+                    console.warn("usted solo puede ingresar numeros como datos del arreglo")
+                }
+            }
+
+            let sinRepetidos = array.filter(function(valor, indiceActual, arreglo) {
+            let indiceAlBuscar = arreglo.indexOf(valor);
+            if (indiceActual === indiceAlBuscar) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        console.log(sinRepetidos)
+        }
+
+        ValoresRepetidos([1,2,5,8,1])
+
+
+
+
+
+// 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
+// function Promedio(arreglo) {
+//     let a = 0
+//     for (const i of arreglo) {
+//         a = a + i
+//     }
+   
+//     let valorPromedio = a/arreglo.length
+//     console.log(valorPromedio)
+// }
+// Promedio([9,8,7,6,5,4,3,2,1,0])
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
