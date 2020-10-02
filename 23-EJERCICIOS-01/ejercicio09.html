@@ -17,15 +17,15 @@
         //      7 restantes números.
         //   - Valida que el título no rebase los 100 caracteres.
         //   - Valida que el director no rebase los 50 caracteres.
-        //   - Valida que el año de estreno sea un número entero de 4 dígitos.
-        
+        //   - Valida que el año de estreno sea un número entero de 4 dígitos.      
         //   - Valida que el país o paises sea introducidos en forma de arreglo.
         //   - Valida que los géneros sean introducidos en forma de arreglo.
+        //   - Crea un método estático que devuelva los géneros aceptados*.
         //   - Valida que los géneros introducidos esten dentro de los géneros 
         //      aceptados*.
-        //   - Crea un método estático que devuelva los géneros aceptados*.
         //   - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
         //     decimal de una posición.
+
         //   - Crea un método que devuelva toda la ficha técnica de la película.
         //   - Apartir de un arreglo con la información de 3 películas genera 3 
         //     instancias de la clase de forma automatizada e imprime la ficha técnica 
@@ -47,18 +47,45 @@
                 this.validarTitulo(titulo);
                 this.validarDirector(director);
                 this.validarAnio(anio);
+                this.validarPais(pais);
+                this.validarGenero(genero);
+                this.validarCalificacion(calificacion)
             }
 
 
+
+            static get obtenerGeneros(){
+                return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
+            }
+
+            // metodo estatico generos aceptados
+            // al utilizar join() convierte a un string
+            static generosAceptados(){
+                console.log(`los generos permitidos son: ${Pelicula.obtenerGeneros.join(", ")} `)
+            }
+
+            FichaTecnica(){
+                console.log(`FICHA TECNICA :\n Codigo ID : ${this.id} \n Titulo    : ${this.titulo} \n Diector   : ${this.director} \n Año cartelera : ${this.anio} \n Genero    : ${this.genero} \n Calificación  : ${this.calificacion} \n`)
+            }
+
             validarCadena(propiedad,valor){        
-                if(!valor) return console.warn(`usted no a ingresado ningun valor`)
+                if(!valor) return console.warn(`usted no a ingresado ningun valor para la propiedad ${propiedad}`)
                 if(typeof valor !== "string") return console.warn(`de la propiedad ${propiedad} el valor ${valor} no es una cadena de texto`)
                 return true
             }
 
-            
+            validarArreglo(propiedad2,valor2){    
+                if(!valor2)  return console.warn(`usted no a ingresado datos en la propiedad ${propiedad2} `)     
+                if(!(valor2 instanceof Array)) return console.warn(`los datos de la propiedad ${propiedad2} no estan dentro de un arreglo`)
+                if(valor2.length === 0) return console.warn(`${valor2} usted ingreso un arreglo vacio de la propiedad ${propiedad2}`)
                 
+                for (const i of valor2) {
+                    if(typeof i !== "string") return console.warn(`los datos ingresados de la propiedad ${propiedad2} no son cadenas de texto`)           
+                }
+                return true
+            }
             
+   
             validarID(id) {
                 if(this.validarCadena("ID",id)){
                     if(!(/^([a-z]){2}([0-9]){7}$/ig.test(id))){
@@ -87,6 +114,7 @@
                 if(!anio) return console.warn("usted no a ingresado el año")
                 if(typeof anio !== "number") return console.warn("el año ingresado solo puede contener numeros")
                 if(Math.sign(anio) === -1) return console.warn("el año ingresado no puede tener numeros negativos")
+
                 if(!(/^([0-9]{4})$/ig.test(anio))){
                     return console.warn("usted a ingresado un año incorrecto")
                 }
@@ -94,14 +122,89 @@
 
             }
 
-        }
+            validarPais(pais){
+                if(this.validarArreglo("Pais",pais)){  
+                    for (const a of pais) {
+                        if(!(/^([a-z]){1,20}$/.test(a))) return console.warn("el pais ingresado no es valido") 
+                    }
+                }
+            }
+
+            validarGenero(genero){
+                if(this.validarArreglo("Genero",genero)){  
+                    for (const b of genero) {
+                        if(!(Pelicula.obtenerGeneros.includes(b))){
+                            console.warn(`${b} genero no aceptado`)
+                        Pelicula.generosAceptados()
+                        }  
+                    }
+                }
+            }
+
+            validarCalificacion(calificacion){
+                if(!calificacion) return console.warn("usted no a ingresado una calificacion")
+                if(typeof calificacion !== "number") return console.warn("la calificacion debe ser numero")
+                if(!(calificacion>=0 || calificacion<=10)) return console.warn("la calificacion no esta dentro de los rangos establecidos")
+                
+                this.calificacion = calificacion.toFixed(1)
+                
+            }
+
+
+
+       }
         
+        // Pelicula.generosAceptados()
+        
+
         const A = new Pelicula({
             id : "hh1234567",
             titulo : "elmango",
             director: "jose",
-            anio : "1245"
+            anio : 1995,
+            pais : ["peru","chile"],
+            genero : ["Sport","Comedy"],
+            calificacion : 2.88
         })
+
+        // A.FichaTecnica()
+
+        const NUEVO = [
+        {
+            id : "hh1234567",
+            titulo : "elmango",
+            director: "jose",
+            anio : 1995,
+            pais : ["peru","chile"],
+            genero : ["Sport","Comedy"],
+            calificacion : 2.88
+        },
+        {
+            id : "dd1234567",
+            titulo : "elmango",
+            director: "jose",
+            anio : 1995,
+            pais : ["peru","chile"],
+            genero : ["Sport","Comedy"],
+            calificacion : 2.88
+        },
+        {
+            id : "aa1234567",
+            titulo : "elmango",
+            director: "jose",
+            anio : 1995,
+            pais : ["peru","chile"],
+            genero : ["Sport","Comedy"],
+            calificacion : 2.88
+        }
+
+        ]
+
+        NUEVO.forEach(function (aj) {
+            new Pelicula(aj).FichaTecnica()
+        })
+
+
 
 
     </script>
