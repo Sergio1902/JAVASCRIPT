@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // COLLBACKS
+            /*
+            -funcion que se ejecuta despues de que otra
+            lo haga
+            -ejecutarse a simismo
+            -ejecutar de una forma asincrona
+            */
+
+        function cuadradoCallbacks(value, callbacks) {
+            setTimeout(() => {
+                // este parametro hacer referencia a dos parametros
+                // el mismo valor y el resultado de la multiplicacion
+                callbacks(value, value*value)
+            }, 0 | Math.random()*1000);
+        }
+
+        cuadradoCallbacks(0,(function (value, result) {
+            console.log("incio CallBack")
+            console.log(`Callback ${value}, ${result}`)
+            cuadradoCallbacks(1,(function (value, result) {
+                console.log(`Callback ${value}, ${result}`)
+            }))
+        }))
+
+    </script>
+</body>
+</html>

@@ -54,11 +54,17 @@
 
 
 
+
+            // trabaja si o si con la clase padre por ser metodo estatico
+            // para poder imprimirlo se llama a la clase padre
+            //se comportan como propiedades no como metodos 
+
             static get obtenerGeneros(){
                 return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
             }
 
-            // metodo estatico generos aceptados
+            // metodo estatico - generos aceptados imprime para luego llamarlo desde
+            // la clase padre
             // al utilizar join() convierte a un string
             static generosAceptados(){
                 console.log(`los generos permitidos son: ${Pelicula.obtenerGeneros.join(", ")} `)
