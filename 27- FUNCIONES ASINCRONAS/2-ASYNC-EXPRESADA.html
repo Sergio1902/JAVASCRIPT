@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cuadradoPromise(value) {
+
+            // CONDICION PARA EL ERROR
+            if(typeof value !== "number") 
+                return Promise.reject(`error, el valor ${value} ingresado no es un numero `)
+
+            return new Promise((resolve,reject)=>{
+                setTimeout(() => {
+                    resolve({
+                        value,
+                        result: value * value
+                    })
+                    }, 0 | Math.random()*1000);
+                })
+        }
+
+        // FUNCION ASINCRONA EXPRESADA
+        /* -anteponer a la funcion ASYNC para indicarle 
+            que es una funcion asincrona 
+           -utiliza try catch para manipular mejor los errores
+        */ 
+        const funcionAsincronaExpresada = async function () {
+            
+            try {
+                console.log("INICIO DE FUNCION ASINCRONA")
+                /*  BENEFICIO DE USAR FUNCIONES ASINCRONAS
+                    PARA OPTIMIZAR CODIGO Y ALMACENAR DATOS DE LA 
+                    PROMESA SIN NECESIDAD DE USAR THEN THEN THEN 
+                */
+                /*
+                    AL UTILIZAR FUNCIONES ASINCRONAS DEBEMOS UTILIZAR PALABRA RESERVADA AWAIT PARA INDICARLE QUE ES ESPERE UNA RESPUESTA DE LA PROMESA PARA CONTINUAR CON LAS DEMAS ACCIONES O TAREAS
+                */
+                let obj = await cuadradoPromise(0)
+                console.log(`${obj.value} ${obj.result}`)
+
+                obj = await cuadradoPromise(1)
+                console.log(`${obj.value} ${obj.result}`)
+
+                obj = await cuadradoPromise(2)
+                console.log(`${obj.value} ${obj.result}`)
+
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        // invocar a la funcion asincrona declarada
+        funcionAsincronaExpresada();
+
+    </script>
+
+
+
+</body>
+</html>

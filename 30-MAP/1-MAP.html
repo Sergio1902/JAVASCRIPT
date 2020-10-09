@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // coleccion de datos relacionados enntre si
+        // con caracteristicas parecia al objetos
+
+        const mapa = new Map();
+        /*
+        agregar elementos
+            recuerda la propiedad y valor se deben 
+            ingresar como string y se alamcen como
+            objetos
+        */
+        // agregar nuevos datos
+        // reasignar datos 
+        mapa.set("nombre","sergio")
+        mapa.set("apellido","carbajal")
+        mapa.set("apellido","carbajal ramos")
+        mapa.set("edad","25")
+        
+        // indica el tamaño similar al length
+        console.log(mapa.size)
+        // conocer si existe esa palabra como propiedad
+        console.log(mapa.has("correo"))
+        console.log(mapa.has("nombre"))
+        // obtener el valor de una propiedad en especifica
+        console.log(mapa.get("apellido"))
+        mapa.delete("edad")
+        console.log(mapa)
+
+        console.log(":::::::::::::::::::::::::::::")
+
+        // recorrer el MAP y mostrar valores
+        for (const [a,b] of mapa) {
+            console.log(`${a} ${b}`)
+        }
+       
+        // crear un map 2da forma
+
+        const MAP2 = new Map([
+        ["nombre","jose"],
+        ["apellido","carbajal"]
+        ])
+
+        console.log(MAP2)
+    </script>
+
+
+</body>
+</html>

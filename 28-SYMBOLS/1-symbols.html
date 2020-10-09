@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // NUEVOS TIPOS DE DATOS
+        /*
+            symbols
+            -datos almacenados de forma privada
+            -nuevo tipo de dato primitivo
+      
+        crear una constante asignandole el constructor 
+        "SYMBOLS" sin la palabra reservada "new"
+
+    
+
+
+        */
+
+        const NOMBRE = Symbol()
+        const APELLIDOMATERNO =Symbol() 
+        const SALUDOS = Symbol()
+
+        const persona = {
+            // symbol indicado con CORCHETES
+            [NOMBRE]:"SERGIO"
+        }
+        persona.apellidoPaterno = "CARBAJAL"
+        /*
+        Para agregar una funcion o nueva propiedad de tipo 
+        symbol es necesario agregar los corchetes
+        Revisar si tienes creado una const de tipo symbol 
+        con el nombre de la nueva propiedad
+        */
+        persona[APELLIDOMATERNO] = "RAMOS"
+        persona[SALUDOS] = function () {
+            console.log("DATOSSSSSSSS")
+        }
+
+    /*
+        al imprimir el objeto, no muestra el nombre de la 
+        propiedad; solo indica que es de tipo symbols    
+        seguir la misma sintaxis llamar a una propiedad
+        de tipo symbol se realizan entre corchetes
+    */
+        console.log(persona)
+        console.log(persona[APELLIDOMATERNO])
+        persona[SALUDOS]()
+
+        /* 
+        saber los symbol que contine 
+        trabaja directamente del objeto Object
+        */
+        console.log(Object.getOwnPropertySymbols(persona))
+        
+
+    </script>
+
+
+</body>
+</html>

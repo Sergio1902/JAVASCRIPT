@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // SETS
+        /*
+            es un objeto especial con caracteristicas
+            de arreglo, que solo hace referencia
+            a datos unicos, solo funciona con 
+            variables de tipo primitivo
+        */         
+
+    const NUMEROS = [1,2,3,4,5,6,7,8,9,5,8,4,1]
+    const NUEVA = new Set([...NUMEROS])
+    console.log(NUEVA)
+    // size - similar al length
+    console.log(NUEVA.size)
+    
+    // agregar datos al arreglo SET
+    NUEVA.add("a")
+    NUEVA.add("b")
+    // para eliminar datos del SET
+    NUEVA.delete("a")
+    // saber si existe ese valor en el SET
+    console.log(NUEVA.has("b"))
+
+    // para recorrer al ARREGLO SET
+    console.log("empieza el for of")
+    for (const iterato of NUEVA) {
+        console.log(iterato)
+    }
+
+    console.log("empieza el foreach")
+    NUEVA.forEach(e => {
+        console.log(e)
+    });
+
+    
+    // mostrar posicion del SET
+    /*
+        primero convertirlo a Arreglo y utilizar
+        la palabra reservada from y almacenarla 
+        en un nuevo arreglo
+    */
+    console.log("mostrar la posición")
+
+    const ARREGLO = Array.from(NUEVA)
+
+    console.log(ARREGLO[1])
+
+    </script>
+
+
+    
+
+</body>
+</html>
