@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* WEAK SET Y WEAK MAP 
+           mapas debiles y conjuntos debiles
+           no se pueden iterar dentro de ellos 
+        */
+
+        const nueva = new WeakSet()
+
+        /* para ingresar valores 
+            se ingresa como objeto y solo uno a la vez 
+            cada valor a ingresar debe guardarse en una
+            constante
+        */
+
+        let A = { "nombre": "sergio"}
+        let B = { "apellido": "carbajal"}
+        nueva.add(A)
+        nueva.add(B)
+        console.log(nueva)
+
+        setInterval(() => {
+            console.log(nueva)
+        }, 2000);
+        
+        /*
+            limpiar el weakSet se necesita por lo mnenos
+            8s asi le coloque 1000 milisegundos
+        */
+        setTimeout(() => {
+            A = null
+            B = null
+        }, 1000);
+
+    </script>
+</body>
+</html>
