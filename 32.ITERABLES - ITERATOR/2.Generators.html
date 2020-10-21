@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        generators 
+            se indica con un asterisco
+            permite hacer iterable una funcion 
+        */
+        function* iterable() {
+            // palabra resevada remplaza al return
+            yield "hola"
+            console.log("HOLA CONSOLA")
+            yield "hola 2"
+            console.log("SEGUIMOS CON MAS INSTRUCCIONES")
+            yield "hola 3"
+            yield "hola 4"
+        }
+
+        let iterator = iterable()
+
+        // recorrer la funcion
+        // imprime cada return o yield
+        for (const y of iterator) {
+            console.log(y)
+        }
+
+        /* 
+        almacenar yield de un generators
+        en un arreglo 
+        */
+        const arr = [...iterable()]
+
+
+
+         
+
+    </script>
+</body>
+</html>

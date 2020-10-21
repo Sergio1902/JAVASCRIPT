@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function cuadrodo(valor) {
+            setTimeout(() => {
+                console.log(valor, resultado = valor * valor)
+            }, Math.random()*1000);
+
+            return{
+                valor,
+                resultado: valor*valor
+            }
+        }
+
+        function* generador() {
+            console.log("inicia generator")
+            yield cuadrodo(0)
+            yield cuadrodo(1)
+            yield cuadrodo(2)
+            yield cuadrodo(3)
+            yield cuadrodo(4)
+            yield cuadrodo(5)
+            console.log("Termina generator")
+        }
+
+        let gen = generador()
+
+        for (const iterator of gen) {
+            console.log(iterator)
+        }
+
+
+
+    </script>
+</body>
+</html>

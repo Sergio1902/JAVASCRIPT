@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* PROXIES
+        permite crear un objeto a partir de otro
+        objeto literal 
+        */
+
+        const persona = {
+            nombre : "",
+            apellido: "",
+            edad: 30
+        }
+
+        /* 
+        utilizado para validar y poder agregar
+        valores al nuevo objeto
+        */
+        
+        const manejador = {
+            set(obj, prop, valor){
+
+                if(Object.keys(obj).indexOf(prop)===-1){
+                    console.warn("la propiedad no se encuentra dentro del objeto principal")               
+                }
+
+                if ((prop === "nombre") && (!(/^[A-Za-zÑñ\s]+$/ig.test(valor)))) 
+                return console.warn(`el valor de la propiedad "${prop}" no es correcto`)
+
+
+                /*
+                antes de agregar se realiza 
+                validaciones
+                */
+                obj[prop]=valor
+            }
+
+            /* 
+            si agregamos una nueva propiedad
+            a la instancia tambien se modificara 
+            el objeto principal - INCORRECTOR
+            */
+
+        }
+
+        /* 
+        el tipo Proxies necesita dos valores
+        el objeto a instanciar y el manejador
+        */
+        const Sergio = new Proxy(persona, manejador)
+        console.log(Sergio)
+        
+        
+        // agregar datos al objeto instanciado
+        Sergio.nombre ="SERGIO"
+        Sergio.apellido = "CARBAJAL RAMOS"
+        Sergio.edad = 25
+        
+        console.log(Sergio)
+
+    </script>
+
+
+
+
+</body>
+</html>

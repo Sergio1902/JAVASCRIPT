@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // elementos iterables 
+        /* son elementos donde sus datos se
+        dan de forma publica que se pueden 
+        recorrer*/
+
+        // elemento iterador
+        /* apuntador utilizado para recorrer
+        los diferentes datos */
+
+        // const iterable = "HOLA"
+        // const iterable = new Set([1,2,4,5,8,5,4,1])
+        const iterable = new Map([
+            ["a","b"],
+            ["a","b"]
+        ])
+
+        // accedemos al iterador del iterable
+        /* mostrando su tipo de dato del iterador
+            symbol.iterator 
+            () permite recorrer al iterable  
+        */
+        const iterator = iterable[Symbol.iterator]()
+
+        /*
+            .next va de la mano con el symbol iterator
+            devuelve dos valores en un objeto
+                1ero - cada valor del iterable
+                2do -  boolean indicando si faltan
+                recorrer datos
+        */
+       
+        console.log(iterable)
+        console.log(iterator)
+        /*
+        cada vez que se ejecute el next va a
+        recorrer los valores del iterador
+        */
+        // console.log(iterator.next())
+        let ite = iterator.next()
+
+        while (!ite.done) {
+            console.log(ite.value)
+            ite = iterator.next()
+        }
+
+
+
+
+    </script>
+</body>
+</html>
