@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            agregar a un objeto un codigo dinamico 
+            como propiedad y un valor de referencia 
+       */
+
+       const CURSOS = {
+            [`U0-${Math.round(Math.random()*100)}`]:"JS"
+       }
+
+       const ARREGLO_CURSOS = ["PHOTOSHOP","ILUSTRATOR","HTML5","CSS3","OFIMATICA"]
+
+       ARREGLO_CURSOS.forEach( (valor,indice) => {
+           CURSOS[`U0-${indice}`]=valor
+       });
+
+       console.log(CURSOS)
+
+    </script>
+</body>
+</html>

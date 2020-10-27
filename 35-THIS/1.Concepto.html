@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+           this
+           hace referencia al mismo objeto 
+        */
+        console.log(this)
+        console.log(window)
+        console.log(this === window)
+
+        this.nombre = "Contexto Global"
+        console.log(this.nombre)
+
+        function imprimir() {
+            console.log(this.nombre)
+        }
+        imprimir()
+
+        const obj = {
+            nombre : "Contexto Bloque",
+            imprimirNombre : function () {
+                console.log(this.nombre)
+            }
+        }
+        obj.imprimirNombre()
+
+
+
+
+
+
+    </script>
+</body>
+</html>

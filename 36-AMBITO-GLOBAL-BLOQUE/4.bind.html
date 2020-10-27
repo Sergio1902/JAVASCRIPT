@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const persona = {
+            nombre : "sergio",
+            saludar: function () {
+                console.log(`hola ${this.nombre}`)
+            }
+        }
+        /*
+            bind
+            enlaza el contexto a cualquier
+            objeto indicado como parametro
+            dentro del bind
+        */
+        const persona2 = {
+            nombre : "JOSE",
+            /*
+            no encuentra la variable nombre 
+            dentro de este objeto
+            por tal se le aumneta bind indicando
+            el lugar o contexto de procedencia
+            */
+            /*
+            bind.persona - hace referencia a la propiedad
+            nombre de el objeto persona 
+            */
+            // saludar: persona.saludar.bind(persona)
+            saludar : persona.saludar
+        }
+
+        persona2.saludar()
+
+    </script>
+</body>
+</html>

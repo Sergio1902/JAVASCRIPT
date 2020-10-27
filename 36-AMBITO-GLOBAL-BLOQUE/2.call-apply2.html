@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        console.log(this)
+        this.lugar = "Contexto Global"
+
+        function saludar(saludo,nombre) {
+            console.log(`${saludo} ${nombre}, te encuentras en un ${this.lugar}`)
+        }
+        // saludar()
+
+
+        const obj = {
+            lugar:"Contexto Bloque"
+        }
+        /*
+        .call - .apply
+            hace referencia al mismo - contexto global
+            a menos que se le indique como 
+            parametro un nuevo contexto de bloque y la 
+            funcion trabaja con parametros de otro objeto
+        */
+        /*  
+            aplicando call y apply a un nuevo objeto
+            call --> parametro seguidos de comas
+            apply --> parametros entre corchetes 
+                        seguido de comas
+        */
+        saludar.call(obj,"buen dia","sergio")
+        saludar.apply(obj,["buen dia","sergio"])
+
+
+    </script>
+</body>
+</html>

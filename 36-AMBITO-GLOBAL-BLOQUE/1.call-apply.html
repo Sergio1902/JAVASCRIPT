@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        console.log(this)
+        this.lugar = "Contexto Global"
+
+        function saludar() {
+            console.log(`${this.lugar}`)
+        }
+        // saludar()
+
+
+        const obj = {
+            lugar:"Contexto Bloque"
+        }
+        /*
+        .call - .apply
+            hace referencia al mismo glbal
+            a menos que se le indique como 
+            parametro un nuevo contexto de bloque
+        */
+        saludar.call()
+        saludar.call(obj)
+        saludar.apply(obj)
+
+    </script>
+</body>
+</html>
