@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        JSON --> NOTACION DE OBJETOS DE JAVA SCRIPT
+        formato ligero de intercambio de datos 
+        
+        para convertir el objeto a una 
+        notacion de datos se necesita 
+        crear un archivo .json
+
+        todo archivo json debe abrir y cerrar
+        llaves -toda propiedad y valor debe
+        estar entre doble comillas
+
+        */
+        const ALUMNO = {
+            cadena: "Sergio",
+            numero: 35,
+            boobleano: true,
+            arreglo: ["correr", "programar","cocinar"],
+            objeto: {
+                email: "ser19car@gmail.com",
+                number: 966464770
+            },
+            nulo: null
+        }
+
+        // estos metodos solo se utilizan en con el objeto
+        // JSON
+        /*
+        .parse convierte una cadena de texto a un objeto
+        o tipo que se muestre ne la notacion
+        */
+        console.log(JSON.parse('[1,2,3]'))
+        console.log(JSON.parse('{"cadena": "Sergio","numero": "35","boobleano": "true","arreglo": ["correr", "programar","cocinar"],"objeto": {"email": "ser19car@gmail.com","number": "966464770"},"nulo": null}'))
+        
+        /*
+        .stringifi convierte el objeto o dato ingresado
+        a una cadena de texto
+        */
+
+        console.log(JSON.stringify(12))
+        console.log(JSON.stringify([]))
+        console.log(JSON.stringify(ALUMNO))
+
+    </script>
+</body>
+</html>

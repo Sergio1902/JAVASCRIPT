@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       /*
+       DOM - documento object Model 
+       BOM - browser objetc Model 
+       CSSOM - css object model
+       APIs - APLICATION PROGRANING INTERFACE
+       */
+    console.log(window)
+    console.log(document)
+
+
+    // API para narrar algun texto
+    let texto = "hola soy sergio"
+    const hablar = function (texto) {
+        speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
+    }
+
+    hablar(texto)
+   </script>
+</body>
+</html>

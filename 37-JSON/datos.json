@@ -1,0 +1,12 @@
+
+{
+    "cadena": "Sergio",
+    "numero": "35",
+    "boobleano": "true",
+    "arreglo": ["correr", "programar","cocinar"],
+    "objeto": {
+        "email": "ser19car@gmail.com",
+        "number": "966464770"
+    },
+    "nulo": null
+}
