@@ -5,7 +5,7 @@
 const $LINK_DOM = document.querySelector(".link-dom")
 // solo obtiene los estilos asignados por el programador
 console.log($LINK_DOM.getAttribute("style"))
-// obtine todos los estilos en un objeto map
+// obtiene todos los estilos en un objeto map
 console.log($LINK_DOM.style)
 // propiedades internas de un atributo .
 console.log($LINK_DOM.style.backgroundColor)

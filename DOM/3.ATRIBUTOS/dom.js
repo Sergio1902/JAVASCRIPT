@@ -30,10 +30,10 @@
     const $LINK = document.querySelector(".link-dom")
     $LINK.setAttribute("target","_blank")
 
-/*
-dato --> para evitar el hack en otra pestaña
-rel = "noopener"
-*/
+    /*
+    dato --> para evitar el hack en otra pestaña
+    rel = "noopener"
+    */
     $LINK.setAttribute("rel","noopener")
     console.log($LINK)
 
@@ -46,17 +46,18 @@ rel = "noopener"
 /* ==================  DATA ATRIBUTOS ====================*/ 
 /* ================================================== */
 
-// const $CARD = document.querySelector(".card")
-// console.log($CARD.getAttribute("data-description"))
-// $CARD.setAttribute("data-description","HOLAAA")
-// console.log($CARD)
+const $CARD = document.querySelector(".card")
+console.log($CARD.getAttribute("data-description"))
+
+$CARD.setAttribute("data-description","HOLAAA")
+console.log($CARD)
 
 /*
 existe un archivo MAP donde almacena los
 data-description -- DATASET
 */
-// console.log($CARD.dataset.description)
-// console.log($CARD.hasAttribute("data-description"))
+console.log($CARD.dataset.description)
+console.log($CARD.hasAttribute("data-description"))
 
 
 /* ================================================== */
