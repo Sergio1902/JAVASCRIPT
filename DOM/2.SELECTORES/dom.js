@@ -25,7 +25,7 @@ console.log(document.getElementById("quees"))
 /*
 actualmente utilizado
 recuerda que tienes que indicarle si es un ID o CLASS
-solo te devuelve el primer elemento encontrdo
+solo te devuelve el primer elemento encontrado
 
 para todos funciona el metodo length
 
@@ -43,6 +43,10 @@ console.log(indice)
 
 // etiquetas html descendiente
 console.log(document.querySelectorAll(".cards .card"))
+
+console.log(document.querySelectorAll(".queeseso .queesesouno"))
+
+
 
 
 
