@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="">
+
+<style>
+    :root{
+        --dark-color: #222;
+        --yellow-color: #F7DF1E;  
+    }
+    .cards{
+        border: thin solid var(--dark-color);
+        padding: 1rem;
+    }
+    .card{
+        display: inline-block;
+        background-color: var(--dark-color);
+        color: var(--yellow-color);
+    }
+    .card figcaption{
+        padding: 1rem;
+    }
+    .rotate-45{
+        transform: rotate(45deg);
+    }
+    .rotate-135{
+        transform: rotate(135deg);
+    }
+    .opacity-80{
+        opacity: 0.8;
+    }
+    .sepia{
+        filter: sepia(1);
+    }
+
+</style>
+
+</head>
+<body>
+
+    <h1 class="titulo">HOLA SOY SERGIO</h1>
+    <br>
+    <h2>MANEJO DEL DOM</h2>
+    <hr>
+    <p id="quees">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perspiciatis voluptas possimus mollitia eum reprehenderit, delectus ipsam et velit, quidem ullam vero repudiandae rerum aliquam. Ipsum rem recusandae similique saepe.</p>
+    <ul>
+        <li><a href="">Seccion 01</a></li>
+        <li><a href="">Seccion 01</a></li>
+        <li><a href="">Seccion 01</a></li>
+        <li><a href="">Seccion 01</a></li>
+        <li><a href="">Seccion 01</a></li>
+    </ul>
+    <input type="text" name="nombre" placeholder="nombre">
+    <a class="link-dom" href="CSS-DOM.html" style="background-color: yellow; color: black;">Inicio</a>
+
+    <section class="cards">
+        <figure class="card ob" data-description = "NUEVO DATO">
+            <img src="https://placeimg.com/200/200/tech" alt="texh">
+            <figcaption>Teach</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/animals" alt="texh">
+            <figcaption>Animals</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/people" alt="texh">
+            <figcaption>People</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/arch" alt="texh">
+            <figcaption>Arch</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://placeimg.com/200/200/nature" alt="texh">
+            <figcaption>Nature</figcaption>
+        </figure>
+    </section>
+
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+
+    <script src="dom.js">
+    </script>
+</body>
+</html>
