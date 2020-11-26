@@ -2,14 +2,16 @@
 /* =============  TEMPLATE HTML =====================*/ 
 /* ================================================== */
 
-// estas etiquetas no se visualizan solo en consola
+// estas etiquetas no se visualizan, solo en consola
 
 const $cards = document.querySelector(".cards")
 
 // ingresar al contenido de la etiqueta template
+// content - necesario para poder viasualizarlo en la consola
 const $template = document.getElementById("template-card").content
+
 const $fragment = document.createDocumentFragment()
-const 
+
 
 // arreglo del card
 cardContent = [
@@ -37,9 +39,10 @@ cardContent.forEach(element => {
     $template.querySelector("img").setAttribute("alt",element.title)
     $template.querySelector("figcaption").textContent = element.title
 
-    // crear un clon del templete creado para agregar 
+    // crear un clon del template - creado para agregar 
     let $clon = document.importNode($template,true)
     $fragment.appendChild($clon)
 });
 
 $cards.appendChild($fragment)
+

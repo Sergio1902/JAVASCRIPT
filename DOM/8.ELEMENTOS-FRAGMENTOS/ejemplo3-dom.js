@@ -24,4 +24,3 @@ ESTACIONES.forEach(function (el) {
     $ul.appendChild($li)
 })
 
-

@@ -17,9 +17,9 @@ const $padre = document.querySelector(".cards")
 // agregar etiquetas internaas al figure
 $img.setAttribute("src","https://placeimg.com/200/200/tech")
 $img.setAttribute("alt","HOLA")
-$figcaption.appendChild($textfigcaption)
 $figure.appendChild($img)
 $figure.appendChild($figcaption)
+$figcaption.appendChild($textfigcaption)
 
 // agregar clase a la etiqueta figure
 $figure.classList.add("card")

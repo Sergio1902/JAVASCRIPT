@@ -45,16 +45,15 @@
     // console.log($LINK.hasAttribute("href"))
     // $LINK.removeAttribute("rel")
 
-
 /* ================================================== */
 /* ==================  DATA ATRIBUTOS ====================*/ 
 /* ================================================== */
 
-const $CARD = document.querySelector(".card") 
-console.log($CARD.getAttribute("data-description"))
+    const $CARD = document.querySelector(".card") 
+    console.log($CARD.getAttribute("data-description"))
 
-$CARD.setAttribute("data-description","HOLAAA")
-console.log($CARD)
+    $CARD.setAttribute("data-description","HOLAAA")
+    console.log($CARD)
 
 /*
 existe un archivo MAP donde almacena los

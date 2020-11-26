@@ -8,7 +8,7 @@ console.log("===== Elementos del Documento ======")
         console.log(document.doctype)
         console.log(document.title)
 
-        // devolver etiquetas - devuelve un COLECCION HTML
+        // devolver etiquetas - devuelve una COLECCION HTML
         console.log(document.links)
         console.log(document.forms)
         console.log(document.images)

@@ -5,6 +5,7 @@
 const $LINK_DOM = document.querySelector(".link-dom")
 
 // solo obtiene los estilos asignados por el programador
+// atributo style - dentro de la misma etiqueta
 console.log($LINK_DOM.getAttribute("style"))
 // obtiene todos los estilos en un objeto map
 console.log($LINK_DOM.style)
@@ -23,7 +24,7 @@ $LINK_DOM.style.width = "50%"
 $LINK_DOM.style.setProperty("text-align","center")
 $LINK_DOM.style.padding ="20px"
 $LINK_DOM.style.setProperty("border-radius","15px")
-console.log($link)
+console.log($LINK_DOM)
 
 /*/
 recuerda el getPropertyValue solo se utliza con getComputedStyle
