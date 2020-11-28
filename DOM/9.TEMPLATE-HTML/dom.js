@@ -1,48 +1,51 @@
-/* ================================================== */
-/* =============  TEMPLATE HTML =====================*/ 
-/* ================================================== */
-
-// estas etiquetas no se visualizan, solo en consola
-
-const $cards = document.querySelector(".cards")
-
-// ingresar al contenido de la etiqueta template
-// content - necesario para poder viasualizarlo en la consola
-const $template = document.getElementById("template-card").content
-
-const $fragment = document.createDocumentFragment()
-
-
 // arreglo del card
 cardContent = [
-    {   title: "Tecnología",
+    {   title: "PROBANDO01",
         img:"https://placeimg.com/200/200/tech"
     },
-    {   title: "Animales",
+    {   title: "PROBANDO02",
         img:"https://placeimg.com/200/200/animals"
     },
-    {   title: "Arquitectura",
+    {   title: "PROBANDO03",
         img:"https://placeimg.com/200/200/arch"
     },
-    {   title: "Gente",
+    {   title: "PROBANDO04",
         img:"https://placeimg.com/200/200/people"
     },
-    {   title: "Naturaleza",
+    {   title: "PROBANDO05",
         img:"https://placeimg.com/200/200/nature"
     }
 ]
 
+const $CARDS = document.querySelector(".cards")
+const $TEMPLATE = document.getElementById("template-card").content
+const $FRAGMENTOS = document.createDocumentFragment()
+
+$TEMPLATE.querySelector("figure").classList.add("card")
+
 cardContent.forEach(element => {
+    $TEMPLATE.querySelector("img").setAttribute("src", element.img)
+    $TEMPLATE.querySelector("img").setAttribute("alt",element.title)
+    $TEMPLATE.querySelector("figcaption").innerText = element.title
 
-    // seleccionar a la img y figcaption y le agrega atributos
-    $template.querySelector("img").setAttribute("src",element.img)
-    $template.querySelector("img").setAttribute("alt",element.title)
-    $template.querySelector("figcaption").textContent = element.title
-
-    // crear un clon del template - creado para agregar 
-    let $clon = document.importNode($template,true)
-    $fragment.appendChild($clon)
+    let $CLON = document.importNode($TEMPLATE,true)
+    $FRAGMENTOS.appendChild($CLON) 
 });
+$CARDS.appendChild($FRAGMENTOS)
 
-$cards.appendChild($fragment)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
