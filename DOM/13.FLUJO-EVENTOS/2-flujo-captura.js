@@ -21,6 +21,7 @@ inidicando mas de un propiedad
 $divEventos.forEach((div) => {
     div.addEventListener("click",flujoEventos,{
         capture:true,
+        
         // permite ejecutar una sola vez los eventos
         once:true
     }) 
