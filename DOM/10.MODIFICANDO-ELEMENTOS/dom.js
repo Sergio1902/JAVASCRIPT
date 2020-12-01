@@ -28,7 +28,7 @@ $newCard.classList.add("card")
 
 // cloneNode - requiere Boolean
 // true genera un clon con todo y contenido
-// flase genera un clon solo esqueleto
+// false genera un clon solo esqueleto
 const $CLON_NODE = $cards.cloneNode(true)
 
 document.body.appendChild($CLON_NODE)

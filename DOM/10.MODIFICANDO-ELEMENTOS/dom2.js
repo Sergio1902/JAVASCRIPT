@@ -30,10 +30,10 @@ $newCard.classList.add("card")
 // $cards.insertAdjacentElement("afterend",$newCard)
 
 // agregar codigo html 
-$newCard.insertAdjacentHTML("beforeend",$contentCard)
-$newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any")
+// $newCard.insertAdjacentHTML("beforeend",$contentCard)
+// $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any")
 
-$cards.insertAdjacentElement("afterbegin",$newCard)
+// $cards.insertAdjacentElement("afterbegin",$newCard)
 
 // nuevos metodos 
 // $cards.prepend($newCard)
