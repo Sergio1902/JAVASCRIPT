@@ -6,8 +6,8 @@ elemento seleccionado
 
 function flujoEventos(e) {
     console.log(`soy el div ${this} - origino el evento el div ${e.target.className} `)
-    e.stopPropagation()
 }
+
 /*
 manejador de eventos al document 
     saber a quien le he dado click dentro del DOM
@@ -37,11 +37,4 @@ document.addEventListener("click",function (e) {
 
 })
 
-
-/*
-$divEventos.forEach((div) => {
-    div.addEventListener("click",flujoEventos)
-    
-});
-*/
 
