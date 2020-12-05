@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICANDO</title>
+    <link rel="stylesheet" href="normalize.css">
+    
+    <!-- hamburguer.css -->
+    <!-- CNDJS. y buscar el min css  -->
+    <link rel="stylesheet" href="hamburgers.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>MENU HAMBURGUESA</h1>
+    </header>
+
+    <!-- btn de hamburguer.css -->
+    <button class="btn-hambur hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>  
+
+    <!-- enlaces del menu desplegable -->
+    <aside class="panel">
+        <nav class="menu">
+            <a href="#seccion1">Seccion 1</a>
+            <a href="#seccion2">Seccion 2</a>
+            <a href="#seccion3">Seccion 3</a>
+            <a href="#seccion4">Seccion 4</a>
+            <a href="#seccion5">Seccion 5</a>
+        </nav>
+    </aside>
+
+    <!-- cuerpo -->
+    <main>
+        <section id="seccion1" class="seccion"><h2>Seccion 1</h2></section>
+        <section id="seccion2" class="seccion"><h2>Seccion 2</h2></section>
+        <section id="seccion3" class="seccion"><h2>Seccion 3</h2></section>
+        <section id="seccion4" class="seccion"><h2>Seccion 4</h2></section>
+        <section id="seccion5" class="seccion"><h2>Seccion 5</h2></section>
+    </main>
+
+
+    
+<!-- type module - para exportar funciones -->
+<script src="menu_hamburguesa.js" type="module"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
