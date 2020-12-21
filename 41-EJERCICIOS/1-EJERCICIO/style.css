@@ -76,7 +76,7 @@ h1,h2,h3{
     transition: all 0.3s ease;
 
 }
-/* is-active aparce y desaparece el panel de nav */
+/* is-active aparce y desaparece el |panel de nav */
 .panel.is-active{
     transform: translate(0, 0);
     transition: all 0.3s ease;
