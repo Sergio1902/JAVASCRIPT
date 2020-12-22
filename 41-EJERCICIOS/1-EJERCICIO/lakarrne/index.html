@@ -4,13 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Karrne</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header>
-        
+        <div class="header">
+            <div class="main-content">
+                <div class="main-header">
+                    <a class="logo" href="#">TITULO</a>
+                    <nav class="panel">
+                        <a href="">Historia</a>
+                        <a href="">La Carta</a>
+                        <a href="">Eventos</a>
+                        <a href="">Galeria</a>
+                        <a href="">Reservas</a>
+                    </nav>
+                    <a href="#">WATSHAP</a>
+                </div>
+            </div>
+        </div>
     </header>
-    <main></main>
+
+    <div class="panel-flotante">
+        <nav class="nav-flotante">
+            <a href="#historia">Historia</a>
+            <a href="#carta">La Carta</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#reservas">Reservas</a>
+        </nav>
+    </div>
+
+    <main>
+        <section id="historia">HISTORIA</section>
+        <section id="carta">LA CARTA</section>
+        <section id="eventos">EVENTOS</section>
+        <section id="galeria">GALERIA</section>
+        <section id="reservas">RESERVAS</section>
+    </main>
+
+    <button class="btn hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+
+
     <footer></footer>
+
+<script src="js/index.js" type="module"></script>
+<script src="js/hamburger.js" type="module"></script>
 
 </body>
 </html>
