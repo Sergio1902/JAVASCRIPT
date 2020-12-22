@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRACTICANDO</title>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     
     <!-- hamburguer.css -->
     <!-- CND JS. y buscar el min css  -->
-    <link rel="stylesheet" href="hamburgers.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
@@ -37,7 +38,20 @@
 
     <!-- cuerpo -->
     <main>
-        <section id="seccion1" class="seccion"><h2>Seccion 1</h2></section>
+        <section id="seccion1" class="seccion">
+            <h2>Bienvenidos al Reloj Digital <br> y alarma sonora</h2>
+            <div>
+                <button id="btnIniciarReloj">Iniciar Reloj</button>
+                <button id="btnDetenerReloj">Detener Reloj</button>
+                <button id="btnIniciarAlarma">Iniciar Alarma</button>
+                <button id="btnDetenerAlarma">Detener Alarma</button>
+            </div>
+            <div id="reloj"></div>
+            <audio id="snd" src="assets/sonido.mp3" controls></audio>
+            
+
+
+        </section>
         <section id="seccion2" class="seccion"><h2>Seccion 2</h2></section>
         <section id="seccion3" class="seccion"><h2>Seccion 3</h2></section>
         <section id="seccion4" class="seccion"><h2>Seccion 4</h2></section>
@@ -48,8 +62,9 @@
 
     
 <!-- type module - para exportar funciones -->
-<script src="index.js" type="module"></script>
-<script src="menu_hamburguesa.js" type="module"></script>
+<script src="js/index.js" type="module"></script>
+<script src="js/menu_hamburguesa.js" type="module"></script>
+<script src="js/reloj.js" type="module"></script>
 
 
 </body>

@@ -23,6 +23,10 @@ h1,h2,h3{
     --second-modal-color: rgba(66, 66, 62, 0.85);
 }
 
+audio{
+    display: none;
+}
+
 /******* MENU HAMBURGUESA **********/
 
 .cabecera{
@@ -41,9 +45,7 @@ h1,h2,h3{
     margin-right: auto;
 
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+  
    
 }
 .btn-hambur{
@@ -104,3 +106,14 @@ h1,h2,h3{
     color: var(--second-color);
     background-color: var(--main-modal-color);
 }
+
+/* RELOJ Y ALARMA */
+
+#seccion1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+   
