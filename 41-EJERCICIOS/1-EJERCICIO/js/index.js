@@ -1,6 +1,6 @@
 import menuHamburguesa from './menu_hamburguesa.js'
 import {Reloj} from './reloj.js'
-import shortcuts from './teclado.js'
+import shortcuts, { moveBall } from './teclado.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // EJECUTAR AL PRESIONAR TECLA
     document.addEventListener("keydown", function (e) {
         shortcuts(e)
+        moveBall(e, ".ball",".stage")
     })
 // EJECUTAR CUANDO SUELTE LA TECLA
 // document.addEventListener("keyup", function (e) {
