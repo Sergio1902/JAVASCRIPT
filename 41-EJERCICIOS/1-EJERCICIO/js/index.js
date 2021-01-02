@@ -1,14 +1,17 @@
 import menuHamburguesa from './menu_hamburguesa.js'
 import {Reloj} from './reloj.js'
 import shortcuts, { moveBall } from './teclado.js'
+import cuentaRegresiva from './cuenta_regresiva.js'
+import btnScrollTop from './btn_scroll_top.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
     menuHamburguesa(".btn-hambur", ".panel", ".panel a");
     Reloj("#reloj","#btnIniciarReloj","#btnDetenerReloj", "#snd","#btnIniciarAlarma","#btnDetenerAlarma")
-    
-
+    cuentaRegresiva(".cuenta-regresiva","Jan 02, 2021 12:08:00","FELIZ CUMPLEAÑOS SERGIO")
+    btnScrollTop(".scroll-top")
 })
+
 
 // EJECUTAR AL PRESIONAR TECLA
     document.addEventListener("keydown", function (e) {

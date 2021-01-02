@@ -134,3 +134,29 @@ audio{
     background-color: #f7df1e;
     transition: all 0.5 ease;
 }
+
+/* BTN - SCROLL - TOP */
+.scroll-top{
+    position: fixed;
+    right: 48%;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+    transition: all 0.5s;
+}
+.scroll-top:hover{
+    color: var(--main-color);
+    background-color: var(--second-color); 
+    transition: all 0.5s;
+}
+.hiden{
+    visibility: hidden;
+    opacity: 0;
+}

@@ -16,18 +16,15 @@ let $limiteStage = document.querySelector(stage).getBoundingClientRect()
             break;
         case 38:
             e.preventDefault()
-            if($limiteBall.top>$limiteStage.top)
-            y--
+            if($limiteBall.top>$limiteStage.top) y--
             break;
         case 39:
             e.preventDefault()
-            if($limiteBall.right<$limiteStage.right)
-            x++
+            if($limiteBall.right<$limiteStage.right) x++
             break;
         case 40:
             e.preventDefault()
-            if($limiteBall.bottom<$limiteStage.bottom)
-            y++
+            if($limiteBall.bottom<$limiteStage.bottom) y++
             break;
         default:
             break;
