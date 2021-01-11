@@ -4,6 +4,7 @@ import shortcuts, { moveBall } from './teclado.js'
 import cuentaRegresiva from './cuenta_regresiva.js'
 import btnScrollTop from './btn_scroll_top.js'
 import btnTheme from './btn-theme.js'
+import contentResponsive from './content-responsive.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -11,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     Reloj("#reloj","#btnIniciarReloj","#btnDetenerReloj", "#snd","#btnIniciarAlarma","#btnDetenerAlarma")
     cuentaRegresiva(".cuenta-regresiva","Jan 02, 2021 12:08:00","FELIZ CUMPLEAÑOS SERGIO")
     btnScrollTop(".scroll-top")
+    contentResponsive("youtube-uno",
+    "(max-width: 1024px)",
+    `<a href="https://www.youtube.com/embed/6IwUl-4pAzc" target="_blank" >VER VIDEO</a>`,
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+    contentResponsive("youtube-dos",
+    "(max-width: 1024px)",
+    `<a href="https://www.youtube.com/embed/6IwUl-4pAzc" target="_blank" >VER VIDEO</a>`,
+    `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
 })
 
 
