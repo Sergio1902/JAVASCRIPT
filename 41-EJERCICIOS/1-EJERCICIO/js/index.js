@@ -3,6 +3,7 @@ import {Reloj} from './reloj.js'
 import shortcuts, { moveBall } from './teclado.js'
 import cuentaRegresiva from './cuenta_regresiva.js'
 import btnScrollTop from './btn_scroll_top.js'
+import btnTheme from './btn-theme.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -26,3 +27,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // document.addEventListener("keypress", function (e) { 
 //         shortcuts(e)
 // })
+
+
+
+// GUARDAR UN TEMA OSCURO - CLARO AL ACTUALIZAR EL NAVEGADOR API LOCALSTORAGE
+btnTheme(".btn-theme", ".btn-theme-figur", ".btn-theme-figure")

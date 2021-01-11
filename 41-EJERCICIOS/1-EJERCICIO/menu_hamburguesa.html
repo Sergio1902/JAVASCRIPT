@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body data-dark>
 
     <header class="cabecera">
         <h1>MENU HAMBURGUESA</h1>
@@ -26,9 +26,18 @@
         </span>
     </button>  
     <!-- btn de scroll top -->
-    <button class="scroll-top hiden"><i class="fas fa-arrow-up"></i>
+    <button class="scroll-top hiden">
+        <i class="fas fa-arrow-up"></i>
     </button>
-
+    <!-- btn de theme -->
+    <button class="btn-theme">
+        <figure class="btn-theme-figur">
+            <img src="assets/luna.png" alt="">
+        </figure>
+        <figure class="btn-theme-figure hiden-theme">
+            <img src="assets/sol.png" alt="">
+        </figure>
+    </button>
 
     <!-- enlaces del menu desplegable -->
     <aside class="panel">
@@ -54,8 +63,6 @@
             <div id="reloj"></div>
             <audio id="snd" src="assets/sonido.mp3" controls></audio>
             
-
-
         </section>
         <section id="seccion2" class="seccion">
             <h2>Eventos del Teclado</h2>
@@ -86,6 +93,7 @@
 <script src="js/teclado.js" type="module"></script>
 <script src="js/cuenta_regresiva.js" type="module"></script>
 <script src="js/btn_scroll_top.js" type="module"></script>
+<script src="js/btn-theme.js" type="module"> </script>
 
 </body>
 </html>

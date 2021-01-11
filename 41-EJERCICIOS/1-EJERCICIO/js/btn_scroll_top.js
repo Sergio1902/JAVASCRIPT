@@ -16,8 +16,6 @@ export default function btnScrollTop(btnScrollTop) {
                 behavior: "smooth",
                 top: 0
             })
-
-
         }
 
     })
