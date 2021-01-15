@@ -5,6 +5,8 @@ import cuentaRegresiva from './cuenta_regresiva.js'
 import btnScrollTop from './btn_scroll_top.js'
 import btnTheme from './btn-theme.js'
 import contentResponsive from './content-responsive.js'
+import responsiveTester from './tester-responsive.js'
+import userDeviceInfo from './dispositivos.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -20,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     "(max-width: 1024px)",
     `<a href="https://www.youtube.com/embed/6IwUl-4pAzc" target="_blank" >VER VIDEO</a>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+    responsiveTester("formulario");
+
+    userDeviceInfo("user-device");
+
+
 })
 
 
@@ -34,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 // })
 // EJECUTAR MIENTRAS PRESIONAS LA TECLA
 // document.addEventListener("keypress", function (e) { 
-//         shortcuts(e)
+//      shortcuts(e)
 // })
 
 

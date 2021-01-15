@@ -7,8 +7,6 @@ export function moveBall(e, ball, stage) {
 let $limiteBall = document.querySelector(ball).getBoundingClientRect()
 let $limiteStage = document.querySelector(stage).getBoundingClientRect()
 
-
-
     switch (e.keyCode) {
         case 37:
             e.preventDefault()

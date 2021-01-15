@@ -186,7 +186,6 @@ audio{
     position: absolute;
     width: 40px;
     height: 40px;
-
 }
 .btn-theme:hover{
     color: var(--main-color);
@@ -200,4 +199,9 @@ audio{
 .theme-dark{
     color: var(--main-color);
     background-color: var(--second-color); 
+}
+
+/* TESTER RESPONSIVE */
+#seccion5{
+    text-align: center;
 }
