@@ -7,6 +7,7 @@ import btnTheme from './btn-theme.js'
 import contentResponsive from './content-responsive.js'
 import responsiveTester from './tester-responsive.js'
 import userDeviceInfo from './dispositivos.js'
+import networkStatus from './networkStatus.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -23,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     `<a href="https://www.youtube.com/embed/6IwUl-4pAzc" target="_blank" >VER VIDEO</a>`,
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
     responsiveTester("formulario");
-
     userDeviceInfo("user-device");
-
 
 })
 
@@ -48,3 +47,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 // GUARDAR UN TEMA OSCURO - CLARO AL ACTUALIZAR EL NAVEGADOR API LOCALSTORAGE
 btnTheme(".btn-theme", ".btn-theme-figur", ".btn-theme-figure")
+networkStatus()
+

@@ -205,3 +205,24 @@ audio{
 #seccion5{
     text-align: center;
 }
+
+/* DETECCION DE RED */
+
+.online,
+.offline{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.online{
+    background-color: green;
+}
+.offline{
+    background-color: red;
+}
