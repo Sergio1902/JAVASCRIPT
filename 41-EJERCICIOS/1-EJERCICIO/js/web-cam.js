@@ -8,7 +8,8 @@ export default function webCam(id) {
             {  video:true, 
                audio:false
             }).then(function (stream) {
-                // stream -- captura la imagend e la camara web
+                // stream -- captura la imagen de la camara web
+                // alamcena en un objeto
                 $video.srcObject = stream
                 $video.play()
             }).catch(function (error) {

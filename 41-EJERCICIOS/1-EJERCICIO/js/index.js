@@ -9,6 +9,7 @@ import responsiveTester from './tester-responsive.js'
 import userDeviceInfo from './dispositivos.js'
 import networkStatus from './networkStatus.js'
 import webCam from './web-cam.js'
+import getGeolocalizacion from './geolocalizacion.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     responsiveTester("formulario");
     userDeviceInfo("user-device");
     webCam("web-cam")
+    getGeolocalizacion("geolocalizacion")
 
 })
 
