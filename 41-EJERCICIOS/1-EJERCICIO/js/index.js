@@ -8,6 +8,7 @@ import contentResponsive from './content-responsive.js'
 import responsiveTester from './tester-responsive.js'
 import userDeviceInfo from './dispositivos.js'
 import networkStatus from './networkStatus.js'
+import webCam from './web-cam.js'
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/6IwUl-4pAzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
     responsiveTester("formulario");
     userDeviceInfo("user-device");
+    webCam("web-cam")
 
 })
 
