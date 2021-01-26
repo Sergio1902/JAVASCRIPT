@@ -11,6 +11,9 @@ import networkStatus from './networkStatus.js'
 import webCam from './web-cam.js'
 import getGeolocalizacion from './geolocalizacion.js'
 import searchFilters from './filtros_busqueda.js'
+import draw from './sorteo.js'
+import slider from './carrousel.js'
+
 
 document.addEventListener("DOMContentLoaded", function (e) {
     // funciones
@@ -31,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     webCam("web-cam")
     getGeolocalizacion("geolocalizacion")
     searchFilters(".card-filter",".card")
-
-
+    draw(".btn_sorteo", ".player")
+    slider()
 })
 
 
