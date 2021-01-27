@@ -76,6 +76,7 @@ body{
     z-index: 998;
     background-color: var(--second-modal-color);
     width: 100%;
+
     /* truco para ocupar toda la pantalla */
     top: 0;
     left: 0;
@@ -295,9 +296,7 @@ img{
     top: 50%;
     display: flex;
     justify-content: space-between;
-
 }
-
 .slider a{
     display: block;
     width: 4rem;
@@ -313,3 +312,47 @@ img{
     color: blue;
 }
 
+/* MENU LATERAL */
+
+@media screen and (min-width:1024px){
+    /* maquetacion con css grid */
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        /* 4rem es solo para el header */
+        grid-template-rows: 4rem auto;
+        grid-template-areas: "header header" "main panel";
+    }
+    main{
+        grid-area: main;
+    }
+    header{
+        grid-area: header;
+    }
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0, 0);
+        justify-content: flex-start;
+        align-self: flex-start;
+        transition: all 0.3s ease;
+        background-color: var(--second-color);
+    }
+    .btn-hambur{
+        display: none;
+    }
+    .menu a{
+        text-align: right;
+        font-size: 1rem;
+        padding: 0.5px;
+    }
+    .menu a:hover,
+    .menu a.active{
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+    .scroll-top{
+        left: 140px;
+    }
+}
