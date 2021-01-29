@@ -14,6 +14,7 @@ import searchFilters from './filtros_busqueda.js'
 import draw from './sorteo.js'
 import slider from './carrousel.js'
 import scrollSpy from './scroll_espia.js'
+import smartVideo from './video_inteligente.js'
 
 
 document.addEventListener("DOMContentLoaded", function (e) {
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
     draw(".btn_sorteo", ".player")
     slider()
     scrollSpy()
+    smartVideo()
 })
 
 

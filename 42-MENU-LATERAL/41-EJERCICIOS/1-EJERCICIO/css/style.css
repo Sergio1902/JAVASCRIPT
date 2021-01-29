@@ -312,6 +312,14 @@ img{
     color: blue;
 }
 
+/* VIDEO INTELIGENTE */
+#seccion13 video{
+    width: 800px;
+    height: 450px;
+}
+
+
+
 /* MENU LATERAL */
 
 @media screen and (min-width:1024px){
