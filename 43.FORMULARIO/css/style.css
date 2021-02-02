@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    /* efecto de movimiento entre cada seccion */
+    scroll-behavior: smooth;
+}
+figure{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+h1,h2,h3{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #f7df1e;
+    --second-color: #222;
+    --main-modal-color: rgba(247,222,30,0.85);
+    --second-modal-color: rgba(66, 66, 62, 0.85);
+    --form-ok-color: green; 
+    --form-error-color: red;
+}
+
+audio{
+    display: none;
+}
+body{
+    text-align: center;
+}
+
+/******* MENU HAMBURGUESA **********/
+
+.cabecera{
+    /* posicion para cabeceras */
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    z-index: 997;
+}
+.seccion{
+    padding: 4rem 2rem 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-height: 100vh;
+  
+   
+}
+.btn-hambur{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+}
+.panel{
+    position: fixed;
+    z-index: 998;
+    background-color: var(--second-modal-color);
+    width: 100%;
+
+    /* truco para ocupar toda la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* aparecer desde cualquier lado */
+    transform: translate(0, -100%);
+    transition: all 0.3s ease;
+
+}
+/* is-active aparce y desaparece el |panel de nav */
+.panel.is-active{
+    transform: translate(0, 0);
+    transition: all 0.3s ease;
+}
+.panel .menu{
+    /* heredar la anchura del padre */
+    width: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.panel .menu a{
+    width: inherit;
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+    color: var(--main-color);
+    transition: all 0.5s ease;
+}
+.panel .menu a:hover{
+    font-weight: bold;
+    color: var(--second-color);
+    background-color: var(--main-modal-color);
+}
+
+
+/* EVENTOS DEL TECLADO */
+
+.stage{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 50vh;
+     background-color: var(--second-color);
+     overflow: hidden;
+}
+.ball{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: #f7df1e;
+    transition: all 0.5 ease;
+}
+
+/* BTN - SCROLL - TOP */
+.scroll-top{
+    position: fixed;
+    right: 48%;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+    transition: all 0.5s;
+}
+.scroll-top:hover{
+    color: var(--main-color);
+    background-color: var(--second-color); 
+    transition: all 0.5s;
+}
+.hiden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* BTN - THEME */
+.btn-theme{
+    position: fixed;
+    left: 5%;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+    transition: all 0.5s;
+}
+.btn-theme figure{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+.btn-theme:hover{
+    color: var(--main-color);
+    background-color: var(--second-color); 
+    transition: all 0.5s;
+}
+.hiden-theme{
+    visibility: hidden;
+    opacity: 0;
+}
+.theme-dark{
+    color: var(--main-color);
+    background-color: var(--second-color); 
+}
+
+
+
+
+
+/* FORMULARIO VALIDACIONES */
+.contact-form{
+    margin: 0 auto;
+    width: 80%;
+}
+.contact-form > * {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+.contact-form textarea{
+    /* bloquear dimenciones del textarea */
+    resize: none;
+}
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+.contact-form input,
+.contact-form textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+/* seleccion por atributo por type */
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* seleccionar todos los atributos */
+.contact-form *::placeholder{
+    color: var(--second-color);
+}
+
+/* cambiar el border cajas de texto */
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color);
+}
+/* clase del span creado error  */
+ .contact-form-error{
+     margin-top: -1rem;
+     font-size: 80%;
+     background-color: var(--form-error-color);
+     color: white;
+     transition: all 800ms ease;
+ }
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-in-out;
+}
+.none{
+    display: none;
+}
+
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* MENU LATERAL */
+
+@media screen and (min-width:1024px){
+    /* maquetacion con css grid */
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        /* 4rem es solo para el header */
+        grid-template-rows: 4rem auto;
+        grid-template-areas: "header header" "main panel";
+    }
+    main{
+        grid-area: main;
+    }
+    header{
+        grid-area: header;
+    }
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0, 0);
+        justify-content: flex-start;
+        align-self: flex-start;
+        transition: all 0.3s ease;
+        background-color: var(--second-color);
+    }
+    .btn-hambur{
+        display: none;
+    }
+    .menu a{
+        text-align: right;
+        font-size: 1rem;
+        padding: 0.5px;
+    }
+    .menu a:hover,
+    .menu a.active{
+        color: var(--second-color);
+        background-color: var(--main-color);
+    }
+    .scroll-top{
+        left: 140px;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-dark>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICANDO</title>
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- hamburguer.css -->
+    <!-- CND JS. y buscar el min css  -->
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-dark>
+
+    <header class="cabecera">
+        <h1>MENU HAMBURGUESA</h1>
+    </header>
+
+    <!-- btn de hamburguer.css -->
+    <button class="btn-hambur hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>  
+    <!-- btn de scroll top -->
+    <button class="scroll-top hiden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- btn de theme -->
+    <button class="btn-theme">
+        <figure class="btn-theme-figur">
+            <img src="assets/luna.png" alt="">
+        </figure>
+        <figure class="btn-theme-figure hiden-theme">
+            <img src="assets/sol.png" alt="">
+        </figure>
+    </button>
+    <!-- enlaces del menu desplegable -->
+    <aside class="panel">
+        <nav class="menu">
+            <a href="#seccion1" data-scroll-spy>Seccion 1</a>
+        </nav>
+    </aside>
+    <!-- cuerpo -->
+    <main>
+      
+        <section id="seccion1" class="seccion" data-scroll-spy>
+            <h2>VALIDACIONES DE FORMULARIO</h2>
+            <form class="contact-form" action="">
+                <legend>Envianos tus comentarios</legend>
+                <!-- title - muestra el mensaje como error -->
+                <!-- required - campo requerido -->
+                <!-- pattern - expresiones regulares -->
+                <input type="text" name="name" placeholder="Esribe tu Nombre" title="el nombre solo acepta letras y espacios en blanco " required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+
+                <input type="email" name="email" required placeholder="ingrese su correo" title="debe ingresar un correo valido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+                <input type="text" name="subject" placeholder="asunto a tratar" title="el asusnto es requerido" required>
+
+                <textarea name="comentario" placeholder="ingrese su comentario" cols="30" rows="10" required data-pattern="^.{1,255}$" title="tu comentario no debe sobrepasar los 255 caracteres"></textarea>
+
+                <input type="submit" name="submit" value="Enviar">
+            </form>
+        
+            <div class="contact-form-loader">
+                <img src="assets/three-dots.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+                <p>Los datos han sido enviados</p>
+            </div>
+
+
+        </section>
+        
+       
+    </main>
+
+
+    
+<!-- type module - para exportar funciones -->
+<script src="https://kit.fontawesome.com/0f83311815.js" crossorigin="anonymous"></script>
+<script src="js/index.js" type="module"></script>
+<script src="js/menu_hamburguesa.js" type="module"></script>
+<script src="js/btn_scroll_top.js" type="module"></script>
+<script src="js/btn-theme.js" type="module"> </script>
+<script src="js/scroll_espia.js" type="module"></script>
+<script src="js/validaciones_form.js" type="module"></script>
+</body>
+</html>
