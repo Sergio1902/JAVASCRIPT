@@ -48,23 +48,23 @@
       
         <section id="seccion1" class="seccion" data-scroll-spy>
             <h2>VALIDACIONES DE FORMULARIO</h2>
-            <form class="contact-form" action="">
+            <form class="contact-form" action="https://formsubmit.co/ser19car@gmail.com" method="POST">
                 <legend>Envianos tus comentarios</legend>
                 <!-- title - muestra el mensaje como error -->
                 <!-- required - campo requerido -->
                 <!-- pattern - expresiones regulares -->
                 <input type="text" name="name" placeholder="Esribe tu Nombre" title="el nombre solo acepta letras y espacios en blanco " required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
 
-                <input type="email" name="email" required placeholder="ingrese su correo" title="debe ingresar un correo valido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
-
-                <input type="text" name="subject" placeholder="asunto a tratar" title="el asusnto es requerido" required>
+                <input type="email" name="email" required placeholder="ingrese su correo" title="debe ingresar un correo valido" pattern="^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$">
+                
+                <input type="text" name="subject" placeholder="asunto a tratar" title="el asunto es requerido" required>
 
                 <textarea name="comentario" placeholder="ingrese su comentario" cols="30" rows="10" required data-pattern="^.{1,255}$" title="tu comentario no debe sobrepasar los 255 caracteres"></textarea>
 
                 <input type="submit" name="submit" value="Enviar">
             </form>
         
-            <div class="contact-form-loader">
+            <div class="contact-form-loader none">
                 <img src="assets/three-dots.svg" alt="Cargando">
             </div>
             <div class="contact-form-response none">
