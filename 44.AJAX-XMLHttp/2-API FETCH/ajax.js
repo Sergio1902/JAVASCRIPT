@@ -24,7 +24,6 @@
         console.log(res)
 
         res.forEach(element => {
-            
             const $li = document.createElement("li")
             $li.innerHTML = element.name
             $FRAGMENTO.appendChild($li)
