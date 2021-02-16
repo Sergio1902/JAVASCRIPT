@@ -34,6 +34,26 @@
       "id": 6,
       "nombre": "vegueta",
       "constelacion": "vegita"
+    },
+    {
+      "nombre": "MILK",
+      "constelacion": "NAMEKU",
+      "id": 8
+    },
+    {
+      "nombre": "mils",
+      "constelacion": "NAMEKU",
+      "id": 9
+    },
+    {
+      "nombre": "AAAA",
+      "constelacion": "NAMEKU",
+      "id": 10
+    },
+    {
+      "nombre": "asdasd",
+      "constelacion": "NAMEKU",
+      "id": 11
     }
   ],
   "dioses": [
