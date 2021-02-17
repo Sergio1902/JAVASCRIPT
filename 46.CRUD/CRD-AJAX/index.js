@@ -8,13 +8,9 @@
     
     const AJAX = function (options) {
         if(!(options instanceof Object)) return
-
         let {metodo, url, succes, error, data} = options 
-
-        //4 EVENTOS PRIMORDIALES
-            
-            const xhr = new XMLHttpRequest()
-            
+        //4 EVENTOS PRIMORDIALES  
+            const xhr = new XMLHttpRequest()          
             xhr.addEventListener("readystatechange", function (e) {   
                 
                 if(xhr.readyState !== 4) return
@@ -26,14 +22,10 @@
                     const message = xhr.responseType || "OCURRIO UN ERROR"
                     error(`${xhr.status} ${message}`)
                 }
-
             })
             xhr.open(metodo||"GET", url)
-
-
             // creacion de cabeceras en la API por cualquer modificacion
             xhr.setRequestHeader("Content-type","application/json; charset=utf-8")
-
             /*  la data modificada regresa a la API
                 la info manipulada esta en formato plano para ser
                 regresada debe estar en formato JSON */
@@ -44,7 +36,7 @@
     function actualizarData() {
         AJAX({
             metodo:"GET",
-            url: "http://localhost:5560/santos",
+            url: "http://localhost:5550/santos",
             succes: function(respuesta) { 
                 respuesta.forEach(element => {
                     $TEMPLATE.querySelector(".santos-name").textContent = element.nombre 
@@ -74,9 +66,24 @@
             $FORM.constelacion.value = e.target.dataset.constelacion
             $FORM.idedit.value = e.target.dataset.id
         }
-        
+        if(e.target.matches(".btn-delete")){
+            e.preventDefault()
+            let confirmar = confirm("DESEA ELIMINAR EL RESGISTRO ? ")
+            if(confirmar){
+                const $ID = e.target.dataset.id
+                AJAX({
+                    metodo: "DELETE",
+                    url: `http://localhost:5550/santos/${$ID}`,
+                    succes: function(respuesta) {
+                        console.log(respuesta)
+                    },
+                    error: function() {
+                        
+                    }
+                })
+            }
+        }
     })
-
 
     document.addEventListener("submit",function (e) {
         // indicando que el evento SUBMIT este dentro del Formulario asiganado
@@ -90,7 +97,7 @@
             if(!$FORM.idedit.value){
                 AJAX({
                     metodo: "POST",
-                    url:"http://localhost:5560/santos",
+                    url:"http://localhost:5550/santos",
                     succes: function (respuesta) {
                         location.reload()
                     },
@@ -109,7 +116,7 @@
                 // PUT ACTUALIZAR
                 AJAX({
                     metodo: "PUT",
-                    url: `http://localhost:5560/santos/${e.target.idedit.value}`,
+                    url: `http://localhost:5550/santos/${e.target.idedit.value}`,
                     succes: function (respuesta) {
                         location.reload()
                     },

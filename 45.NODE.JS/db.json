@@ -21,39 +21,14 @@
       "constelacion": "Andromeda"
     },
     {
-      "id": 5,
-      "nombre": "ikki",
-      "constelacion": "MSbean"
-    },
-    {
       "id": 7,
       "nombre": "goku",
       "constelacion": "vegita"
     },
     {
-      "id": 6,
-      "nombre": "vegueta",
-      "constelacion": "vegita"
-    },
-    {
-      "nombre": "MILK",
-      "constelacion": "NAMEKU",
-      "id": 8
-    },
-    {
-      "nombre": "mils",
-      "constelacion": "NAMEKU",
-      "id": 9
-    },
-    {
-      "nombre": "AAAA",
-      "constelacion": "NAMEKU",
-      "id": 10
-    },
-    {
-      "nombre": "asdasd",
-      "constelacion": "NAMEKU",
-      "id": 11
+      "nombre": "MARY",
+      "constelacion": "CARBAJAL",
+      "id": 33
     }
   ],
   "dioses": [
