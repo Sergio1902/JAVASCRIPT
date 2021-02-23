@@ -1,14 +1,14 @@
 {
   "santos": [
     {
-      "id": 1,
-      "nombre": "Seiya",
-      "constelacion": "Pegaso"
+      "nombre": "GOKU",
+      "constelacion": "Pegaso",
+      "id": 1
     },
     {
-      "id": 2,
-      "nombre": "Shinyu",
-      "constelacion": "Dragon"
+      "nombre": "Shinyuasdasd",
+      "constelacion": "Dragon",
+      "id": 2
     },
     {
       "id": 3,
@@ -29,6 +29,11 @@
       "nombre": "MARY",
       "constelacion": "CARBAJAL",
       "id": 33
+    },
+    {
+      "nombre": "sdasd",
+      "constelacion": "asdsa",
+      "id": 34
     }
   ],
   "dioses": [

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CRUD - AJAX</h2>
+    <section class="crud">
+        <article>
+            <h2 class="crud-title">Agregar Santo</h2>
+            <form action="" class="crud-form">
+                <input type="text" name="nombre" placeholder="Ingresar Nombre" required> <br>
+                <input type="text" name="constelacion" placeholder="Ingresar Constelación" required>
+                <input type="hidden" name="idedit">
+                <input type="submit" value="enviar">    
+            </form>
+        </article>
+        <article>
+            <h2>Ver Santos</h2>
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>Santos</th>
+                        <th>Constelación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <template id="crud-template">
+        <tr>
+            <td class="santos-name"></td>
+            <td class="santos-constelacion"></td>
+            <td>
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>    
+    <script src="index.js"></script>
+</html>
