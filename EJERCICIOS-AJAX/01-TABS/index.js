@@ -22,7 +22,7 @@
 
     }
 
-    document.addEventListener("DOMCotentLoaded", function (e) {
+    document.addEventListener("DOMContentLoaded", function (e) {
         getHTML({
             url:"assets/tabs1.html",
             succes: function (html) {
