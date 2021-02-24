@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+        .main-container{
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header{
+            background-color: brown;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+        }
+        .menu ul{
+            display: flex;
+            list-style-type: none;
+        }
+        .menu ul li{
+            cursor: pointer;
+        }
+        .menu ul li:not(:last-child){
+            margin-right: 30px;
+        }
+        .body{
+            background-color: rgb(142, 212, 71);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            text-align: center;
+        }
+        .body div{
+            padding: 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-container">
+            <div class="header">
+                <div class="logo">Logo</div>
+                <div class="menu">
+                    <ul>
+                        <li>ENLACE 1</li>
+                        <li>ENLACE 2</li>
+                        <li>ENLACE 3</li>
+                        <li>ENLACE 4</li>
+                        <li>ENLACE 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="body">
+                <div>
+                    <h1 class="title"></h1>
+                    <h3 class="description"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+<script src="index.js"></script>
+</body>
+</html>
