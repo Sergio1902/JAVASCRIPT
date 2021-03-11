@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: brown;
+            min-height: 100vh;
+        }
+        progress{
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- multiple - permite subir varios archivos a ala vez -->
+        <input type="file" id="files" name="files" required multiple>
+        <!-- barra de progreso con etiqueta  -->
+        <!-- <progress value="70" max="100"></progress> -->
+    </main>
+
+
+    <script>
+        const $main = document.querySelector("main")
+        const $files = document.getElementById("files")
+
+        function uploader(file) {
+            const xhr = new XMLHttpRequest()
+            /* para ser utilizado y guardado en el archivo 
+            php */
+            const formData = new FormData()
+            /* por cada archivo ingresado crea un 
+            input de type file */
+            formData.append("file", file)
+
+            xhr.addEventListener("readystatechange", function (e) {
+                if(xhr.readyState !==4) return 
+                if(xhr.status>=200 && xhr.status<=300){
+                                        
+                }else{
+                    let message = xhr.statusText || "OCURRIO UN ERROR"
+                    console.log(`ERROR: ${xhr.status} ${message}`)
+                }
+            })
+            xhr.open("POST", "uploader.php")
+            // cabecera para formularios
+            xhr.setRequestHeader("enc-type","multipart/form-data")
+            xhr.send(formData)
+        
+        }
+
+        function progressUpload(file) {
+            const $progress = document.createElement("progress")
+            const $span = document.createElement("span")
+
+            $progress.value = 0
+            $progress.max = 100
+
+            $main.insertAdjacentElement("beforeend", $progress)
+            $main.insertAdjacentElement("beforeend", $span)
+
+            /*
+            fileReader nueva API para barra de progreso depende del peso del archivo a asubir
+                * metodo readAsDataURL - recibe como parametro el archivo a subir
+                * maneja dos eventos al iniciar carga y al terminar carga
+            */
+           const fileReader = new FileReader
+           fileReader.readAsDataURL(file)
+
+            // eventos
+            fileReader.addEventListener("progress", function (e) {
+                // la barra de progreso
+                let progress = parseInt((e.total*100)/e.loaded)
+                $progress.value = progress
+                $span.innerHTML = `<b>${file.name}-${progress}</b>`
+
+            })
+            fileReader.addEventListener("loadend", function (e) {
+                // conectarse con el archivo php
+                uploader(file)
+                setTimeout(() => {
+                    $main.removeChild($progress)
+                    $main.removeChild($span)
+                    $files.value = ""
+                }, 3000);
+            })
+            
+        }
+
+        /*
+        evento change - ejecuta la funcion cada vez que reconoce un cambio en el html
+        */
+        document.addEventListener("change", function (e) {
+            if(e.target === $files){
+            /*
+                .files - propiedad de los imput file 
+                para visualizar propiedades internas
+
+                console.log($file.files)
+            */
+                // variable donde se guardan cada file
+                // se convierte a arreglo para poder recorrerlo Array.from
+                const files = Array.from(e.target.files)
+                files.forEach(element => {
+                     progressUpload(element)
+                });
+            }
+        })
+    </script>
+
+</body>
+</html>

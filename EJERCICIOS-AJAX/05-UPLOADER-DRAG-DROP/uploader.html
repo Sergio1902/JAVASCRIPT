@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: brown;
+            min-height: 100vh;
+        }
+        progress{
+            margin-top: 1rem;
+        }
+        .drop-zone{
+            margin: 0 auto;
+            border: thin dotted black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 40vh;
+            text-align: center;
+        }
+        .is-active{
+            border: thick dashed black;
+            background-color: chartreuse;
+            animation: pulse 1.5s infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        
+        <article class="drop-zone">
+            <p>Arrastra y suelta tus archivos</p>
+
+        </article>
+        
+    </main>
+
+
+    <script>
+        
+
+        
+        const $main = document.querySelector("main")
+        const $dropZone = document.querySelector(".drop-zone")
+        
+        function uploader(file) {
+            
+            const xhr = new XMLHttpRequest()
+            /* para ser utilizado y guardado en el archivo 
+            php */
+            const formData = new FormData()
+            /* por cada archivo ingresado crea un 
+            input de type file */
+            formData.append("file", file)
+            
+            xhr.addEventListener("readystatechange", function (e) {
+                if(xhr.readyState !==4) return 
+                if(xhr.status>=200 && xhr.status<=300){
+                                        
+                }else{
+                    let message = xhr.statusText || "OCURRIO UN ERROR"
+                    console.log(`ERROR: ${xhr.status} ${message}`)
+                }
+            })
+            xhr.open("POST", "uploader.php")
+            // cabecera para formularios
+            xhr.setRequestHeader("enc-type","multipart/form-data")
+            xhr.send(formData)
+        
+        }
+
+        function progressUpload(file) {
+            const $progress = document.createElement("progress")
+            const $span = document.createElement("span")
+
+            $progress.value = 0
+            $progress.max = 100
+
+            $main.insertAdjacentElement("beforeend", $progress)
+            $main.insertAdjacentElement("beforeend", $span)
+
+            /*
+            fileReader nueva API para barra de progreso depende del peso del archivo a asubir
+                * metodo readAsDataURL - recibe como parametro el archivo a subir
+                * maneja dos eventos al iniciar carga y al terminar carga
+            */
+           const fileReader = new FileReader
+           fileReader.readAsDataURL(file)
+
+            // eventos
+            fileReader.addEventListener("progress", function (e) {
+                // la barra de progreso
+                let progress = parseInt((e.total*100)/e.loaded)
+                $progress.value = progress
+                $span.innerHTML = `<b>${file.name}-${progress}</b>`
+
+            })
+            fileReader.addEventListener("loadend", function (e) {
+                // conectarse con el archivo php
+                uploader(file)
+                setTimeout(() => {
+                    $main.removeChild($progress)
+                    $main.removeChild($span)
+                }, 3000);
+            })
+            
+        }
+        
+        /*
+        API DRAG & DROP - trabaja con tres eventos - 
+            el manejador de eventos se asigna directamente al dropZone y no al DOM ya que solo ahi se genera interaccion utilziando los 3 eventos 
+            - dragover que hacer cuando el mouse esta   dentro de la zona
+            - dragleave que hacer cuando el mouse sale de la zona
+            - drop que hacer cuando se suelta el archivo dentro de la zona
+        */
+
+        $dropZone.addEventListener("dragover", function(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            $dropZone.classList.add("is-active")
+        })
+        $dropZone.addEventListener("dragleave", function(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            $dropZone.classList.remove("is-active")
+        })
+        $dropZone.addEventListener("drop", function(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            /*
+            este evento engloba los archivos subidos en una propiedad data transfer
+            */
+            const FILES = Array.from(e.dataTransfer.files)
+            FILES.forEach(element => {
+                progressUpload(element)
+            });
+            $dropZone.classList.remove("is-active")
+        })
+    </script>
+
+</body>
+</html>

@@ -41,7 +41,7 @@ export default function contactFormValidations() {
         }
     })
     document.addEventListener("submit", function (e) {
-        // e.preventDefault()
+        e.preventDefault()
         
         const $LOADER = document.querySelector(".contact-form-loader")
         const $MESAGE = document.querySelector(".contact-form-response")
